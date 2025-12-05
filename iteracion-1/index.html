@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -14,32 +15,91 @@
             alt="Bookmark logo"
           />
         </h1>
+        <ul class="sidebar">
+          <li onclick="hideSidebar()">
+            <div class="sidebar-logos-container">
+              <a class="sidebar-bookmark-logo anchor-side" href="#"
+                ><img
+                  src="/starter-code/images/logo-bookmark.svg"
+                  alt="bookmark logo"
+              /></a>
+              <a
+                class="sidebar-exit-logo anchor-side"
+                class="anchor-side"
+                href="#"
+                ><img
+                  src="/starter-code/images/icon-close.svg"
+                  alt="simbol to close sidebar"
+              /></a>
+            </div>
+          </li>
 
-        <img src="/starter-code/images/icon-hamburger.svg" alt="" />
+          <li><a class="anchor-side" href="#features">FEATURES</a></li>
+          <li><a class="anchor-side" href="#">PRICING</a></li>
+          <li><a class="anchor-side" href="#contact">CONTACT</a></li>
+          <li><button>LOGIN</button></li>
+          <li>
+            <div class="sidebar-socialmedia-logos-container">
+              <a href="#"
+                ><img
+                  src="/starter-code/images/icon-facebook.svg"
+                  alt="icon facebook"
+              /></a>
+              <a href="#"
+                ><img
+                  src="/starter-code/images/icon-twitter.svg"
+                  alt="icon twitter"
+              /></a>
+            </div>
+          </li>
+        </ul>
+
+        <ul>
+          <li class="hideOnMobile">
+            <a class="anchor-main" href="#features">FEATURES</a>
+          </li>
+          <li class="hideOnMobile">
+            <a class="anchor-main" href="#">PRICING</a>
+          </li>
+          <li class="hideOnMobile">
+            <a class="anchor-main" href="#contact">CONTACT</a>
+          </li>
+          <li class="hideOnMobile"><button>LOGIN</button></li>
+          <li class="menu-button" onclick="showSidebar()">
+            <a href="#"
+              ><img
+                class="hamburgermenu"
+                src="/starter-code/images/icon-hamburger.svg"
+                alt="website navigation menu"
+            /></a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main>
       <section class="hero">
         <img
-          src="/starter-code/images/illustration-features-tab-1.svg"
+          class="header-illustration-features"
+          src="/starter-code/images/illustration-hero.svg"
           alt="illustration features tab"
         />
         <h2>A Simple Bookmark Manager</h2>
 
-        <p>
+        <p class="parraph-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quidem
           pariatur rem, mollitia consequuntur at, error tenetur dicta ex enim
           ratione, eligendi velit rerum temporibus necessitatibus dolorum totam
           fuga voluptate.
         </p>
-
-        <button>Get it on Chrome</button>
-        <button>Get it on Firefox</button>
+        <div class="container-buttons-hero">
+          <button class="elem-with-color-accent">Get it on Chrome</button>
+          <button>Get it on Firefox</button>
+        </div>
       </section>
       <section class="features">
         <h2>Features</h2>
 
-        <p>
+        <p class="parraph-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quidem
           pariatur rem, mollitia consequuntur at, error tenetur dicta ex enim
           ratione, eligendi velit rerum temporibus necessitatibus dolorum totam
@@ -52,7 +112,7 @@
       </section>
       <section class="download">
         <h2>Download the Extension</h2>
-        <p>
+        <p class="parraph-text">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam
           officiis repudiandae, temporibus quod aliquid sunt repellat maxime
           eaque vel ipsam, sapiente harum hic ducimus laboriosam delectus
@@ -61,6 +121,7 @@
 
         <div class="extension">
           <img
+            class="browser-icon"
             src="/starter-code/images/logo-chrome.svg"
             alt="google chrome logo"
           />
@@ -70,20 +131,30 @@
             src="/starter-code/images/bg-dots.svg"
             alt="separation dots for more readable information"
           />
-          <button>Add & Install Extension</button>
+          <button class="elem-with-color-accent">
+            Add & Install Extension
+          </button>
         </div>
         <div class="extension">
-          <img src="/starter-code/images/logo-firefox.svg" alt="firefox logo" />
+          <img
+            class="browser-icon"
+            src="/starter-code/images/logo-firefox.svg"
+            alt="firefox logo"
+          />
           <h3>Add to Firefox</h3>
           <p>Minimum version 55</p>
           <img
             src="/starter-code/images/bg-dots.svg"
             alt="separation dots for more readable information"
           />
-          <button>Add & Install Extension</button>
+
+          <button class="elem-with-color-accent">
+            Add & Install Extension
+          </button>
         </div>
         <div class="extension">
           <img
+            class="browser-icon"
             src="/starter-code/images/logo-opera.svg"
             alt="google chrome logo"
           />
@@ -93,12 +164,14 @@
             src="/starter-code/images/bg-dots.svg"
             alt="separation dots for more readable information"
           />
-          <button>Add & Install Extension</button>
+          <button class="elem-with-color-accent">
+            Add & Install Extension
+          </button>
         </div>
       </section>
       <section class="faq">
         <h2>Frequently Asked Questions</h2>
-        <p>
+        <p class="parraph-text">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia nobis
           voluptate quibusdam consequatur necessitatibus, velit aliquam enim
           excepturi, beatae perferendis vero. Ipsa voluptate deleniti hic sunt
@@ -136,9 +209,9 @@
         <button>More Info</button>
       </section>
 
-      <section class="contact">
+      <section id="contact" class="elem-with-color-accent">
         <p class="sobretitulo">35.000+ ALREADY JOINED</p>
-        <h2 class="contact-statement"></h2>
+        <p class="contact-statement">Stay up-to-date with what we re doing</p>
         <input type="text" placeholder="Enter your email address" />
         <button class="contact-us">Contact Us</button>
       </section>
@@ -152,5 +225,7 @@
       <img src="/starter-code/images/icon-facebook.svg" alt="icon facebook" />
       <img src="/starter-code/images/icon-twitter.svg" alt="icon twitter" />
     </footer>
+
+    <script src="main.js"></script>
   </body>
 </html>
