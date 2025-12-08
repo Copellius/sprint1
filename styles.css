@@ -1,0 +1,215 @@
+
+
+:root {
+  --primary-accent-color: #8a96e7;
+  --secondary-accent-color: red;
+  --parraph-color: grey;
+}
+
+.elem-with-color-accent {
+  background-color: var(--primary-accent-color);
+  color: white;
+}
+
+.parraph-text {
+  color: var(--parraph-color);
+}
+
+
+
+* {
+  margin: 0;
+  padding: 1%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul, nav img{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.anchor-main{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display : flex;
+    align-items: center;
+    color: black;
+}
+
+.anchor-side{
+    height: 100%;
+    padding: 20px;
+    text-decoration: none;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+nav a:hover, nav button:hover{
+    background-color: lightgray;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(2, 2, 56, 0.785); 
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.sidebar-logos-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-bookmark-logo{
+  max-width: 50%;
+}
+
+.sidebar-exit-logo{
+  max-width: 25%;
+}
+
+.sidebar-socialmedia-logos-container{
+  display: flex;
+  max-width: 40%;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 40%;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.menu-button{
+  display: none;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  min-height: 100vh;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+  
+}
+
+
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 100px 0;
+}
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;      /* recorta la mancha dentro de la imagen */
+}
+
+
+.hero-image img {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* MANCHA AZUL – mobile, como en el diseño */
+.hero-image::before {
+  content: "";
+  position: absolute;
+  right: -80%;                 /* la empujo bien hacia la derecha */
+  top: 60%;                    /* más baja, casi debajo de la mitad */
+  width: 160%;                 /* muy ancha, para que se vea solo parte */
+  height: 80%;                /* alta, pero recortada por overflow */
+  background-color: hsl(231, 69%, 60%);
+  border-radius: 9999px;       /* forma ovalada grande */
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.hero h2{
+    padding: 50px 0 20px 0;
+}
+
+
+.container-buttons-hero {
+  display: flex;
+  padding: 20px 0 0 0;
+  gap: 0.5rem;
+  width: 100%;
+
+}
+
+
+.container-buttons-hero button {
+  flex: 1;
+  margin: auto;
+
+}
+
+.extension {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.browser-icon {
+  align-items: center;
+  max-width: 20%;
+  height: auto;
+}
+
+footer {
+  background-color: rgb(2, 2, 56);
+  color: white;
+}
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display : none;
+  }
+  .menu-button{
+  display: block;
+}
+
+  @media(max-width: 400px){
+    .sidebar{
+      width:100%
+    }
+  }
+}
