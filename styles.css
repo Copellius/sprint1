@@ -1,7 +1,7 @@
 
 
 :root {
-  --primary-accent-color: #8a96e7;
+  --primary-accent-color:  hsl(231, 69%, 60%);
   --secondary-accent-color: red;
   --parraph-color: grey;
 }
@@ -117,10 +117,15 @@ nav a:hover, nav button:hover{
 
 body {
   font-family: 'Rubik', sans-serif;
+  font-weight: 300;
   min-height: 100vh;
   letter-spacing: 1.6px;
   line-height: 1.5;
   
+}
+
+h2, h3{
+  font-weight: 500;
 }
 
 
@@ -179,10 +184,106 @@ body {
 .container-buttons-hero button {
   flex: 1;
   margin: auto;
+  border-radius: 5px;
+  padding: 15px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+
 
 }
 
+
+
+.features p{
+padding-bottom: 40px;
+   border: 0.5px;
+  border-bottom-style: solid;
+  border-bottom-color:  rgb(207, 205, 205);
+
+}
+
+.features h3{
+  display: flex;
+  padding: 15px;
+  border: 0.5px;
+  border-bottom-style: solid;
+  border-bottom-color:  rgb(207, 205, 205);
+  position: relative;
+  justify-content: center;
+  text-align: center;
+}
+
+.features a{
+text-decoration: none;
+display: block;
+width: 100%;
+text-align: center;
+color: var(--parraph-color);
+
+}
+
+.features a h3::after{
+  display: none;
+  content:"";
+  background: red;
+  height: 4px;
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+}
+
+.features h3:hover .features h3::after{
+  display: block;
+}
+
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 100px 0;
+}
+.features-image {
+  position: relative;
+  width: 100%;
+
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;      /* recorta la mancha dentro de la imagen */
+}
+
+
+.features-image img {
+  width: 80%;
+  display: block;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
+/* MANCHA AZUL – mobile, como en el diseño */
+.features-image::before {
+  content: "";
+  position: absolute;
+  left: -80%;                 /* la empujo bien hacia la derecha */
+  top: 60%;                    /* más baja, casi debajo de la mitad */
+  width: 160%;                 /* muy ancha, para que se vea solo parte */
+  height: 80%;                /* alta, pero recortada por overflow */
+  background-color: hsl(231, 69%, 60%);
+  border-radius: 9999px;       /* forma ovalada grande */
+  transform: translateY(-50%);
+  z-index: 1;
+
+}
+
+.features h2{
+  margin-top: 20px;
+}
+
 .extension {
+
   display: flex;
   flex-direction: column;
   align-items: center;
