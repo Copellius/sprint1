@@ -11,6 +11,27 @@ function hideSidebar(){
 }
 
 function showFeatureOne(){
-    const feature = document.querySelector(".feature-one")
-    feature.style.display = "block"
+    const featureOne = document.querySelector(".feature-one")
+    const featureTwo = document.querySelector(".feature-two")
+    const featureThree = document.querySelector(".feature-three")
+    featureOne.style.display = "block"
+    featureTwo.style.display = "none"
+    featureThree.style.display = "none"
 }
+function showFeatureTwo(){
+    const featureOne = document.querySelector(".feature-one")
+    const featureTwo = document.querySelector(".feature-two")
+    const featureThree = document.querySelector(".feature-three")
+    featureOne.style.display = "none"
+    featureTwo.style.display = "block"
+    featureThree.style.display = "none"
+}
+function showFeatureThree(){
+    const featureOne = document.querySelector(".feature-one")
+    const featureTwo = document.querySelector(".feature-two")
+    const featureThree = document.querySelector(".feature-three")
+    featureOne.style.display = "none"
+    featureTwo.style.display = "none"
+    featureThree.style.display = "block"
+}
+

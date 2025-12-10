@@ -103,9 +103,9 @@
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
         </p>
-        <h3><a href="#feature-one" onclick="showFeatureOne()">Simple Bookmarking</a></h3>
-        <h3><a href="#">Speedy Searching</a></h3>
-        <h3><a href="#">Easy Sharing</a></h3>
+        <h3 ><a class="feature-one-box" href="#feature-one" onclick="showFeatureOne()">Simple Bookmarking</a></h3>
+        <h3><a href="#feature-two" onclick="showFeatureTwo()">Speedy Searching</a></h3>
+        <h3><a href="#feature-three" onclick="showFeatureThree()">Easy Sharing</a></h3>
 
         <div class="feature-one" >
           <div class="features-image">
@@ -121,6 +121,7 @@
             interface gives you complete control over how you manage your
             favourite sites.
           </p>
+           <button class="btn-info">More Info</button>
         </div>
         <div class="feature-two">
           <div class="features-image">
@@ -129,13 +130,12 @@
               alt="illustration feature speedy searching"
             />
           </div>
-          <h2>Bookmark in one click</h2>
+          <h2>Intelligent Search</h2>
 
           <p class="parraph-text">
-            organize your bookmarks however you like. Our simple drag-and-drop
-            interface gives you complete control over how you manage your
-            favourite sites.
+            Our powerful feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
           </p>
+          <button class="btn-info">More Info</button>
         </div>
         <div class="feature-three">
           <div class="features-image">
@@ -144,22 +144,18 @@
               alt="illustration feature easy sharing"
             />
           </div>
-          <h2>Bookmark in one click</h2>
+          <h2>Share your bookmarks</h2>
 
           <p class="parraph-text">
-            organize your bookmarks however you like. Our simple drag-and-drop
-            interface gives you complete control over how you manage your
-            favourite sites.
+            Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
           </p>
+           <button class="btn-info">More Info</button>
         </div>
       </section>
       <section class="download">
         <h2>Download the Extension</h2>
         <p class="parraph-text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam
-          officiis repudiandae, temporibus quod aliquid sunt repellat maxime
-          eaque vel ipsam, sapiente harum hic ducimus laboriosam delectus
-          corrupti ex quaerat sequi?
+          We ve got more browsers in the pipeline. Please do let us know if zou ve got a favourite you d like us to prioritize.
         </p>
 
         <div class="extension">
@@ -170,11 +166,11 @@
           />
           <h3>Add to Chrome</h3>
           <p>Minimum version 62</p>
-          <img
+          <img class="separation-dots"
             src="../starter-code/images/bg-dots.svg"
             alt="separation dots for more readable information"
           />
-          <button class="elem-with-color-accent">
+          <button class="btn-extension">
             Add & Install Extension
           </button>
         </div>
@@ -186,12 +182,12 @@
           />
           <h3>Add to Firefox</h3>
           <p>Minimum version 55</p>
-          <img
+          <img class="separation-dots"
             src="../starter-code/images/bg-dots.svg"
             alt="separation dots for more readable information"
           />
 
-          <button class="elem-with-color-accent">
+          <button class="btn-extension">
             Add & Install Extension
           </button>
         </div>
@@ -203,11 +199,11 @@
           />
           <h3>Add to Opera</h3>
           <p>Minimum version 46</p>
-          <img
+          <img class="separation-dots"
             src="../starter-code/images/bg-dots.svg"
             alt="separation dots for more readable information"
           />
-          <button class="elem-with-color-accent">
+          <button class="btn-extension">
             Add & Install Extension
           </button>
         </div>
@@ -215,55 +211,60 @@
       <section class="faq">
         <h2>Frequently Asked Questions</h2>
         <p class="parraph-text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia nobis
-          voluptate quibusdam consequatur necessitatibus, velit aliquam enim
-          excepturi, beatae perferendis vero. Ipsa voluptate deleniti hic sunt
-          vitae ratione repellat modi.
+          Here are some of our FAQs. If you have any other questions you d like answered please feel free to email us.
         </p>
 
         <div class="question">
           <h3>What is Bookmark?</h3>
-          <img
+          <div>
+            <img
             src="../starter-code/images/icon-arrow.svg"
             alt="image of a dropdown arrow"
           />
+          </div>
         </div>
         <div class="question">
           <h3>How can I request a new browser?</h3>
-          <img
+          <div>
+            <img
             src="../starter-code/images/icon-arrow.svg"
             alt="image of a dropdown arrow"
           />
+          </div>
         </div>
         <div class="question">
           <h3>Is there a mobile app?</h3>
-          <img
+         <div>
+            <img
             src="../starter-code/images/icon-arrow.svg"
             alt="image of a dropdown arrow"
           />
+          </div>
         </div>
         <div class="question">
           <h3>What about other Chromium browsers?</h3>
-          <img
+          <div>
+            <img
             src="../starter-code/images/icon-arrow.svg"
             alt="image of a dropdown arrow"
           />
+          </div>
         </div>
-        <button>More Info</button>
+        <button class="btn-faq">More Info</button>
       </section>
 
-      <section id="contact" class="elem-with-color-accent">
+      <section class="contact">
         <p class="sobretitulo">35.000+ ALREADY JOINED</p>
-        <p class="contact-statement">Stay up-to-date with what we re doing</p>
+        <h2 class="contact-statement">Stay up-to-date with what we re doing</h2>
         <input type="text" placeholder="Enter your email address" />
-        <button class="contact-us">Contact Us</button>
+        <button class="btn-contact">Contact Us</button>
       </section>
     </main>
     <footer>
       <img src="../starter-code/images/logo-bookmark.svg" alt="Bookmark logo" />
-      <p class="features">FEATURES</p>
-      <p class="pricing">PRICING</p>
-      <p class="contact">CONTACT</p>
+      <p class="footer-features">FEATURES</p>
+      <p class="footer-pricing">PRICING</p>
+      <p class="footer-contact">CONTACT</p>
 
       <img src="../starter-code/images/icon-facebook.svg" alt="icon facebook" />
       <img src="../starter-code/images/icon-twitter.svg" alt="icon twitter" />

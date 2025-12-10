@@ -146,6 +146,8 @@ body {
 h2 {
   font-size: 2.4rem;
   font-weight: 550;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 h3 {
@@ -156,8 +158,9 @@ h3 {
 p {
   font-size: 1.4rem;
   line-height: 1.8;
- margin: 1.6rem auto;     /* centra el párrafo */
-  padding: 0 2rem; 
+  margin-left: 2em;
+  margin-right: 2rem;  
+  padding: 0 3rem; 
   color: var(--parraph-color);
 }
 
@@ -204,25 +207,35 @@ p {
 
 .container-buttons-hero {
   display: flex;
-  gap: 0.5rem;
+  gap: 2rem;
   width: 100%;
+  padding-top: 2rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
 .container-buttons-hero button {
   flex: 1;
   margin: auto;
+  font-weight: 700;
   border-radius: 0.5rem;
   padding: 1.5rem;
   border: none;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  box-shadow: var(--primary-accent-color)
 }
 
 /* FEATURES */
 .features p {
   padding-bottom: 4rem;
   border: 0.05rem;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(207, 205, 205);
+}
+
+.feature-one-box{
+  border: 0.05rem;
+  border-top-style: solid;
+  border-top-color: rgb(207, 205, 205);
+  padding-top: 1.5rem;
+
 }
 
 .features h3 {
@@ -235,6 +248,7 @@ p {
   justify-content: center;
   text-align: center;
   width: 100%;
+
 }
 
 .features a {
@@ -265,7 +279,8 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 10rem 0;
+  margin-bottom: 10rem ;
+
 }
 
 .features-image {
@@ -299,13 +314,28 @@ p {
 }
 
 .features h2 {
-  margin-top: 2rem;
+  margin-top: 3rem;
+}
+
+.btn-info{
+  margin: auto;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: none;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-accent-color);
+  color: white;
 }
 
 .feature-one,
 .feature-two,
 .feature-three {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
   display: none;
+
 }
 
 /* EXTENSIONS */
@@ -313,12 +343,95 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 5rem;
+  margin-top: 5rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}
+
+.download h2{
+  margin-bottom: 2rem;
+}
+
+.download p{
+  margin-bottom: 4rem;
 }
 
 .browser-icon {
+  display: block;  
   align-items: center;
-  max-width: 20%;
+  max-width: 50%;
   height: auto;
+  margin: 3rem auto
+}
+
+.separation-dots{
+  width: 100%;        
+  height: auto;      
+  display: block;     
+  margin: 0 auto;  
+
+}
+
+.btn-extension{
+  width: 80%;
+  margin: 2.5rem auto;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: none;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-accent-color);
+  color: white;
+}
+
+/* FAQ */
+
+
+.faq h2{
+  margin-top: 15rem;
+  margin-bottom: 2rem;
+}
+
+.faq p{
+  margin-bottom: 5rem;
+}
+
+.question{
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border: 0.05rem;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(207, 205, 205);
+  color: rgb(105, 104, 104)
+}
+
+.btn-faq{
+  margin-top: 5rem;
+  margin-bottom: 12rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5em;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border: none;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-accent-color);
+  color: white;
+}
+
+
+/*CONTACT*/
+
+.contact{
+  display: block;
+
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--primary-accent-color);
+  color: white;
 }
 
 footer {
@@ -326,18 +439,51 @@ footer {
   color: white;
 }
 
-@media (max-width: 80rem) {
+.sobretitulo{
+  color: white;
+  letter-spacing: 0.3rem;
+}
+
+input{
+  width: 80%;
+  display: block;
+  margin: 2rem auto;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  color: rgb(203, 203, 203);
+  text-align: left;
+}
+
+.btn-contact{
+   width: 80%;
+  display: block;
+  margin: 2rem auto;
+  margin-top: 0.5rem;
+  margin-bottom:3rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: none;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 47, 47);
+  color: white;
+
+}
+
+@media (max-width: 600px) {
   .hideOnMobile {
     display: none;
   }
 
   .menu-button {
     display: block;
+   
   }
-
-  @media (max-width: 40rem) {
-    .sidebar {
+  .sidebar {
       width: 100%;
     }
-  }
 }
