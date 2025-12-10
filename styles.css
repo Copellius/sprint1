@@ -388,6 +388,11 @@ p {
 /* FAQ */
 
 
+.faq{
+  display: block;
+  margin: auto;
+  align-items: center;
+}
 .faq h2{
   margin-top: 15rem;
   margin-bottom: 2rem;
@@ -397,9 +402,16 @@ p {
   margin-bottom: 5rem;
 }
 
+.questions-box{
+  display: block;
+  align-items: center;
+width: 90%;
+}
 .question{
+  
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1.5rem;
   border: 0.05rem;
   border-bottom-style: solid;
