@@ -1,9 +1,21 @@
 
 
+
+/* VARIABLES Y SETEO BASICO */
+
 :root {
-  --primary-accent-color:  hsl(231, 69%, 60%);
+  --primary-accent-color: hsl(231, 69%, 60%);
   --secondary-accent-color: red;
-  --parraph-color: grey;
+  --parraph-color: rgb(153, 153, 153);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 .elem-with-color-accent {
@@ -15,136 +27,156 @@
   color: var(--parraph-color);
 }
 
-
-
 * {
   margin: 0;
-  padding: 1%;
-  box-sizing: border-box;
+  padding: 0;
   text-align: center;
 }
 
+
+
+/* NAVIGATION BAR */
+
+/* MAIN */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 3rem;
 }
 
-nav ul, nav img{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+nav ul,
+nav img {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.anchor-main{
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display : flex;
-    align-items: center;
-    color: black;
+.anchor-main {
+  height: 100%;
+  padding: 0 3rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
 }
 
-.anchor-side{
-    height: 100%;
-    padding: 20px;
-    text-decoration: none;
-    display : flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+/* SIDE  */
+.anchor-side {
+  height: 100%;
+  padding: 2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
-
-nav a:hover, nav button:hover{
-    background-color: lightgray;
+nav a:hover,
+nav button:hover {
+  background-color: lightgray;
 }
 
-.sidebar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(2, 2, 56, 0.785); 
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 25rem;
+  z-index: 999;
+  background-color: rgba(2, 2, 56, 0.785);
+  backdrop-filter: blur(1rem);
+  box-shadow: -1rem 0 1rem rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.sidebar li{
-    width: 100%;
+.sidebar li {
+  width: 100%;
 }
 
-.sidebar a{
-    width: 100%;
+.sidebar a {
+  width: 100%;
 }
 
-.sidebar-logos-container{
+.sidebar-logos-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.sidebar-bookmark-logo{
+
+.sidebar-bookmark-logo {
   max-width: 50%;
 }
 
-.sidebar-exit-logo{
-  max-width: 25%;
+.sidebar-exit-logo {
+  max-width: 15%;
 }
 
-.sidebar-socialmedia-logos-container{
+.sidebar-socialmedia-logos-container {
   display: flex;
   max-width: 40%;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  width: 40%;
+  width: 20%;
   margin: auto;
-  padding-top: 10px;
+  padding-top: 2rem;
 }
 
-.menu-button{
+.menu-button {
   display: none;
 }
 
+/* BODY */
+
 body {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 300;
+  font-family: verdana, sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6;
   min-height: 100vh;
-  letter-spacing: 1.6px;
-  line-height: 1.5;
-  
 }
 
-h2, h3{
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 550;
+}
+
+h3 {
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
+p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+ margin: 1.6rem auto;     /* centra el párrafo */
+  padding: 0 2rem; 
+  color: var(--parraph-color);
+}
 
-
-
+/* HERO */
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 0px 100px 0;
+  padding: 0 0 10rem 0;
 }
+
 .hero-image {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 50rem;
   margin: 0 auto;
-  overflow: visible;      /* recorta la mancha dentro de la imagen */
+  overflow: hidden;
+  padding: 2rem;
 }
-
 
 .hero-image img {
   width: 100%;
@@ -153,84 +185,71 @@ h2, h3{
   z-index: 2;
 }
 
-/* MANCHA AZUL – mobile, como en el diseño */
 .hero-image::before {
   content: "";
   position: absolute;
-  right: -80%;                 /* la empujo bien hacia la derecha */
-  top: 60%;                    /* más baja, casi debajo de la mitad */
-  width: 160%;                 /* muy ancha, para que se vea solo parte */
-  height: 80%;                /* alta, pero recortada por overflow */
+  right: -80%;
+  top: 60%;
+  width: 160%;
+  height: 70%;
   background-color: hsl(231, 69%, 60%);
-  border-radius: 9999px;       /* forma ovalada grande */
+  border-radius: 9999px;
   transform: translateY(-50%);
   z-index: 1;
 }
 
-.hero h2{
-    padding: 50px 0 20px 0;
+.hero h2 {
+  padding: 5rem 0 2rem 0;
 }
-
 
 .container-buttons-hero {
   display: flex;
   gap: 0.5rem;
   width: 100%;
-
 }
-
 
 .container-buttons-hero button {
   flex: 1;
   margin: auto;
-  border-radius: 5px;
-  padding: 15px;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
   border: none;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
-
-
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
 }
 
-
-
-.features p{
-padding-bottom: 40px;
-   border: 0.5px;
+/* FEATURES */
+.features p {
+  padding-bottom: 4rem;
+  border: 0.05rem;
   border-bottom-style: solid;
-  border-bottom-color:  rgb(207, 205, 205);
-
+  border-bottom-color: rgb(207, 205, 205);
 }
 
-.features h3{
+.features h3 {
   display: flex;
-  padding: 15px;
-  border: 0.5px;
+  padding: 1.5rem;
+  border: 0.05rem;
   border-bottom-style: solid;
-  border-bottom-color:  rgb(207, 205, 205);
+  border-bottom-color: rgb(207, 205, 205);
   position: relative;
   justify-content: center;
   text-align: center;
   width: 100%;
 }
 
-.features a{
-text-decoration: none;
-display: block;
-width: 100%;
-text-align: center;
-color: var(--parraph-color);
-
-}
-
-.feature-one, .feature-two, .feature-three{
-  display: none;
+.features a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: var(--parraph-color);
 }
 
 .features h3::after {
   display: none;
   content: "";
   background: red;
-  height: 4px;
+  height: 0.4rem;
   width: 50%;
   position: absolute;
   bottom: 0;
@@ -246,48 +265,51 @@ color: var(--parraph-color);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 0px 100px 0;
+  padding: 0 0 10rem 0;
 }
+
 .features-image {
   position: relative;
   width: 100%;
-
-  max-width: 500px;
+  max-width: 50rem;
   margin: 0 auto;
-  overflow: hidden;      /* recorta la mancha dentro de la imagen */
+  overflow: hidden;
 }
-
 
 .features-image img {
   width: 80%;
   display: block;
   position: relative;
   z-index: 2;
-  padding-bottom: 30px;
+  padding-bottom: 3rem;
   margin: 0 auto;
 }
 
-/* MANCHA AZUL – mobile, como en el diseño */
 .features-image::before {
   content: "";
   position: absolute;
-  left: -80%;                 /* la empujo bien hacia la derecha */
-  top: 60%;                    /* más baja, casi debajo de la mitad */
-  width: 160%;                 /* muy ancha, para que se vea solo parte */
-  height: 80%;                /* alta, pero recortada por overflow */
+  left: -80%;
+  top: 60%;
+  width: 160%;
+  height: 80%;
   background-color: hsl(231, 69%, 60%);
-  border-radius: 9999px;       /* forma ovalada grande */
+  border-radius: 9999px;
   transform: translateY(-50%);
   z-index: 1;
-
 }
 
-.features h2{
-  margin-top: 20px;
+.features h2 {
+  margin-top: 2rem;
 }
 
+.feature-one,
+.feature-two,
+.feature-three {
+  display: none;
+}
+
+/* EXTENSIONS */
 .extension {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -304,17 +326,18 @@ footer {
   color: white;
 }
 
-@media(max-width: 800px){
-  .hideOnMobile{
-    display : none;
+@media (max-width: 80rem) {
+  .hideOnMobile {
+    display: none;
   }
-  .menu-button{
-  display: block;
-}
 
-  @media(max-width: 400px){
-    .sidebar{
-      width:100%
+  .menu-button {
+    display: block;
+  }
+
+  @media (max-width: 40rem) {
+    .sidebar {
+      width: 100%;
     }
   }
 }
