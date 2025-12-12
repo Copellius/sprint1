@@ -10,28 +10,16 @@ function hideSidebar(){
     sidebar.style.display = "none"
 }
 
-function showFeatureOne(){
-    const featureOne = document.querySelector(".feature-one")
-    const featureTwo = document.querySelector(".feature-two")
-    const featureThree = document.querySelector(".feature-three")
-    featureOne.style.display = "block"
-    featureTwo.style.display = "none"
-    featureThree.style.display = "none"
-}
-function showFeatureTwo(){
-    const featureOne = document.querySelector(".feature-one")
-    const featureTwo = document.querySelector(".feature-two")
-    const featureThree = document.querySelector(".feature-three")
-    featureOne.style.display = "none"
-    featureTwo.style.display = "block"
-    featureThree.style.display = "none"
-}
-function showFeatureThree(){
-    const featureOne = document.querySelector(".feature-one")
-    const featureTwo = document.querySelector(".feature-two")
-    const featureThree = document.querySelector(".feature-three")
-    featureOne.style.display = "none"
-    featureTwo.style.display = "none"
-    featureThree.style.display = "block"
-}
+function showFeature(which) {
+  const one = document.querySelector(".feature-one");
+  const two = document.querySelector(".feature-two");
+  const three = document.querySelector(".feature-three");
 
+  one.classList.remove("active");
+  two.classList.remove("active");
+  three.classList.remove("active");
+
+  if (which === 1) one.classList.add("active");
+  if (which === 2) two.classList.add("active");
+  if (which === 3) three.classList.add("active");
+}
