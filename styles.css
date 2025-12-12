@@ -42,13 +42,20 @@ nav {
   padding: 3rem;
 }
 
-nav ul,
-nav img {
-  width: 100%;
+nav ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+nav img {
+  display: block;
+  width: auto;
+  height: auto;
 }
 
 .anchor-main {
@@ -57,7 +64,7 @@ nav img {
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: black;
+  color: rgb(71, 71, 71);
 }
 
 /* SIDE  */
@@ -134,7 +141,6 @@ nav button:hover {
 
   .sidebar {
     width: 100%;
-    
   }
 
 /* BODY */
@@ -477,46 +483,43 @@ p {
 /*CONTACT*/
 
 .contact {
-  display: block;
-
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 5rem 3rem;
   background-color: var(--primary-accent-color);
   color: white;
 }
 
-.sobretitulo {
+.contact .sobretitulo,
+.contact .contact-statement {
   color: white;
-  letter-spacing: 0.3rem;
 }
 
-input {
-  width: 80%;
-  display: block;
-  margin: 2rem auto;
+.contact-container{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-width: 45rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-email {
+  width: 100%;
   border: none;
   border-radius: 0.5rem;
   padding: 1.5rem;
-  color: rgb(203, 203, 203);
   text-align: left;
 }
 
 .btn-contact {
-  width: 80%;
-  display: block;
-  margin: 2rem auto;
-  margin-top: 0.5rem;
-  margin-bottom: 3rem;
-  font-weight: 700;
-  border-radius: 0.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  width: 100%;
   border: none;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  font-weight: 700;
   background-color: rgb(255, 47, 47);
   color: white;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
 }
 
 /*FOOTER*/
@@ -531,7 +534,7 @@ footer {
 footer p{
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: white;
+  color: var(--parraph-color);
 }
 
 .container-logos{
@@ -543,28 +546,36 @@ footer p{
 }
 
 @media (min-width: 1040px) {
+
   /*HEADER*/
   .hideOnMobile {
     display: block;
+  }
+
+  nav{
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
+  nav a{
+    font-size: 1.2rem;
   }
   .menu-button {
     display: none;
   }
 
-  .btn-login-nav{
-  margin-top: 5rem;
-  margin-bottom: 12rem;
-  font-weight: 700;
+  .btn-login-nav {
+  margin: 0;
+  padding: 0.5rem 2.4rem;
   border-radius: 0.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5em;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  border: none;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
-  background-color: var(--primary-accent-color);
+  border: 0.2rem solid hsl(0, 94%, 66%);
+  background: hsl(0, 94%, 66%);
   color: white;
-  }
+  font-weight: 500;
+  box-shadow: none;
+}
+
+
 
   /*HERO*/
 
@@ -594,6 +605,7 @@ footer p{
 .container-buttons-hero button{
   flex: 0.33;
   margin: 0;
+  white-space: nowrap;
 }
 
 /*FEATURES*/
@@ -641,7 +653,89 @@ padding-bottom: 2rem;
     margin-left: 8rem;
     margin-right: 8rem;     
   }
+
+  /*DOWNLOAD*/
+
+  .extensions-container{
+    display: flex;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-top: 4rem;
+    gap: 3rem;
+    justify-content: center;
+    align-items: flex-start;
   
+  }
+  
+  .extension{
+    margin: 0;
+   
+  }
+
+.extension:nth-of-type(1) {
+  margin-top: 2rem;
+}
+
+.extension:nth-of-type(2) {
+  margin-top: 4rem;
+}
+
+.extension:nth-of-type(3) {
+  margin-top: 6rem;
+}
+
+/*FAQ*/
+
+.questions-box{
+  margin-right: 20rem;
+  margin-left: 20rem;
+}
+
+/*CONTACT*/
+
+
+  .contact {
+    padding: 6rem 8rem;
+  }
+
+  .contact-container {
+    flex-direction: row;
+    align-items: center;
+    max-width: 60rem;
+  }
+
+.input-email {
+    flex: 1;
+  }
+
+.btn-contact {
+    width: auto;
+    white-space: nowrap;
+  }
+
+/*FOOTER*/
+
+footer{
+  display: flex;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+footer p{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+footer .img-container{
+  max-width: 80%;
+  height: auto;
+}
+
+.container-logos{
+  padding-top: 0;
+  margin-left: auto;
+}
+
 }
 
 

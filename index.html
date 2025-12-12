@@ -44,7 +44,7 @@
           <li><a class="anchor-side" href="#features">FEATURES</a></li>
           <li><a class="anchor-side" href="#">PRICING</a></li>
           <li><a class="anchor-side" href="#contact">CONTACT</a></li>
-          <li><button class="btn-login-nav">LOGIN</button></li>
+          <li><button class="btn-login-sidenav">LOGIN</button></li>
           <li>
             <div class="sidebar-socialmedia-logos-container">
               <a href="#">
@@ -75,7 +75,7 @@
             <a class="anchor-main" href="#contact">CONTACT</a>
           </li>
           <li class="hideOnMobile">
-            <button>LOGIN</button>
+            <button class="btn-login-nav">LOGIN</button>
           </li>
           <li class="menu-button" onclick="showSidebar()">
             <a href="#">
@@ -210,7 +210,7 @@
           We ve got more browsers in the pipeline. Please do let us know if you
           ve got a favourite you d like us to prioritize.
         </p>
-
+       <div class="extensions-container">
         <div class="extension">
           <img
             class="browser-icon"
@@ -257,7 +257,7 @@
             alt="separation dots for more readable information"
           />
           <button class="btn-extension">Add & Install Extension</button>
-        </div>
+        </div></div>
       </section>
 
       <!-- FAQ -->
@@ -343,13 +343,14 @@
         <h2 class="contact-statement">
           Stay up to date with what we re doing
         </h2>
-        <input type="text" placeholder="Enter your email address" />
-        <button class="btn-contact">Contact Us</button>
+        <div class="contact-container">
+        <input class="input-email" type="text" placeholder="Enter your email address" />
+        <button class="btn-contact">Contact Us</button></div>
       </section>
     </main>
 
     <footer>
-      <img
+     <div class="img-container"></div> <img
         src="./starter-code/images/logo-bookmark.svg"
         alt="Bookmark logo"
       />
