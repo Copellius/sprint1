@@ -29,8 +29,48 @@ html {
 * {
   margin: 0;
   padding: 0;
-  text-align: center;
 }
+
+.container{  
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+}
+
+.btn-primary{
+  background-color: var(--primary-accent-color);
+  color: white;
+  box-shadow: 0 0.4rem 0.8rem rgba(0,0,0,0.2);
+}
+
+.btn-grey{
+  background-color: rgb(240,240,240);
+  color: rgb(71,71,71);
+  box-shadow: 0 0.4rem 0.8rem rgba(0,0,0,0.2);
+}
+
+.btn-red{
+  background-color: rgb(250, 66, 66);
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0.4rem 0.8rem rgba(0,0,0,0.2);
+}
+
+img{
+  cursor: pointer;
+}
+
 
 /* NAVIGATION BAR */
 
@@ -39,7 +79,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem;
+  padding: 3rem 0;
 }
 
 nav ul {
@@ -147,17 +187,19 @@ nav button:hover {
 
 body {
   font-family: verdana, sans-serif;
+  text-align: center;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.6;
   min-height: 100vh;
 }
 
+
+
 h2 {
   font-size: 2.4rem;
   font-weight: 550;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin: 2rem 0 0;
 }
 
 h3 {
@@ -168,8 +210,7 @@ h3 {
 p {
   font-size: 1.4rem;
   line-height: 1.8;
-  margin-left: 2em;
-  margin-right: 2rem;
+  margin: 1rem 0 0;
   color: var(--parraph-color);
 }
 
@@ -214,7 +255,7 @@ p {
   padding: 5rem 0 2rem 0;
 }
 
-.container-buttons-hero {
+.container-buttons-hero{
   display: flex;
   gap: 2rem;
   width: 100%;
@@ -225,19 +266,13 @@ p {
 
 .container-buttons-hero button {
   flex: 1;
-  margin: auto;
-  font-weight: 700;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  border: none;
-  box-shadow: var(--primary-accent-color);
 }
 
 /* FEATURES */
 
 .container-features{
-  display: block;
-  width: 90%;
+ width: 100%;
+  margin: 0 auto;
 }
 .features p {
   padding-bottom: 4rem;
@@ -328,16 +363,6 @@ p {
   margin-top: 3rem;
 }
 
-.btn-info {
-  margin: auto;
-  font-weight: 700;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  border: none;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
-  background-color: var(--primary-accent-color);
-  color: white;
-}
 
 .feature-one,
 .feature-two,
@@ -386,16 +411,9 @@ p {
   margin: 0 auto;
 }
 
-.btn-extension {
+.extension button{
   width: 80%;
   margin: 2.5rem auto;
-  font-weight: 700;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  border: none;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
-  background-color: var(--primary-accent-color);
-  color: white;
 }
 
 /* FAQ */
@@ -465,19 +483,9 @@ p {
   font-size: 1.4rem;
 }
 
-.btn-faq {
+.faq button {
   margin-top: 5rem;
   margin-bottom: 12rem;
-  font-weight: 700;
-  border-radius: 0.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5em;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  border: none;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
-  background-color: var(--primary-accent-color);
-  color: white;
 }
 
 /*CONTACT*/
@@ -511,15 +519,8 @@ p {
   text-align: left;
 }
 
-.btn-contact {
+.contact button {
   width: 100%;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 1.5rem 2rem;
-  font-weight: 700;
-  background-color: rgb(255, 47, 47);
-  color: white;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
 }
 
 /*FOOTER*/
@@ -528,13 +529,15 @@ footer {
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: rgb(2, 2, 56);
-  color: white;
 }
 
-footer p{
+
+footer a{
+  display: block;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: var(--parraph-color);
+  text-decoration: none;
+  color: white;
 }
 
 .container-logos{
@@ -552,9 +555,8 @@ footer p{
     display: block;
   }
 
-  nav{
-    margin-left: 6rem;
-    margin-right: 6rem;
+  header .container{
+    padding: 0 2rem;
   }
 
   nav a{
@@ -564,18 +566,10 @@ footer p{
     display: none;
   }
 
-  .btn-login-nav {
-  margin: 0;
-  padding: 0.5rem 2.4rem;
-  border-radius: 0.5rem;
-  border: 0.2rem solid hsl(0, 94%, 66%);
-  background: hsl(0, 94%, 66%);
-  color: white;
-  font-weight: 500;
-  box-shadow: none;
+  nav .btn {
+ 
+  padding: 1rem 2.4rem;
 }
-
-
 
   /*HERO*/
 
@@ -708,35 +702,38 @@ padding-bottom: 2rem;
     flex: 1;
   }
 
-.btn-contact {
+.contact button {
     width: auto;
     white-space: nowrap;
   }
 
 /*FOOTER*/
 
-footer{
+
+footer .container{
   display: flex;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 2rem;
 }
 
-footer p{
+footer a{
   padding-top: 0;
   padding-bottom: 0;
-}
-
-footer .img-container{
-  max-width: 80%;
-  height: auto;
+  margin: 0;
+  font-size: 1.2rem;
+  color: white;
 }
 
 .container-logos{
-  padding-top: 0;
-  margin-left: auto;
+   margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
 }
 
-}
+
 
 
   
