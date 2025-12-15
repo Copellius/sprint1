@@ -1,0 +1,15 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.btn-primary{
+ @include button($clr-light-blue, $clr-white)
+}
+
+.btn-grey{
+ @include button($clr-white, $clr-grey)
+}
+
+.btn-red{
+ @include button($clr-red, $clr-white)
+}
+

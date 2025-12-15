@@ -1,0 +1,58 @@
+
+@use "variables" as *;
+
+/*SETEO GLOBAL*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  cursor: pointer;
+}
+
+.container{  
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+
+/*BODY*/
+
+body {
+  font-family: $ff-body;
+  min-height: 100vh;
+  text-align: center;
+
+  h2 {
+  font-size: $fs-h2;
+  font-weight: $fw-h2;
+  line-height: $lh-h2;
+}
+
+h3 {
+  font-size: $fs-h3;
+  font-weight: $fw-h3;
+}
+
+p {
+  font-size: $fs-p;
+  line-height: $lh-p;
+}
+
+.parraph-text {
+  color: $clr-grey;
+}
+}
+
+

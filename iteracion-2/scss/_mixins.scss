@@ -1,0 +1,17 @@
+
+// @mixin flex(){}
+
+@mixin button($background-color, $color){
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0,0,0,0.2);
+  border: none;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  background-color: $background-color;
+  color: $color;
+}
+
