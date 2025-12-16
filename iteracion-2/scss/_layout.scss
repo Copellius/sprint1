@@ -5,9 +5,8 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-}
 
-*,
+  *,
 *::before,
 *::after {
   box-sizing: inherit;
@@ -15,8 +14,9 @@ html {
   padding: 0;
 }
 
-img{
+  img{
   cursor: pointer;
+}
 }
 
 .container{  
@@ -26,7 +26,6 @@ img{
   padding: 0 4rem;
 }
 
-
 /*BODY*/
 
 body {
@@ -34,7 +33,7 @@ body {
   min-height: 100vh;
   text-align: center;
 
-  h2 {
+h2 {
   font-size: $fs-h2;
   font-weight: $fw-h2;
   line-height: $lh-h2;
