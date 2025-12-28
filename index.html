@@ -10,7 +10,7 @@
     <header>
       <div class="container" >
       <nav class=" p-4">
-        <h1 class="hidden lg:flex justify-start">
+        <h1>
           <img
             src="./starter-code/images/logo-bookmark.svg"
             alt="Bookmark logo"
@@ -18,9 +18,9 @@
         </h1>
 
         <!-- SIDEBAR MOBILE -->
-        <ul class="sidebar">
+        <ul class="sidebar hidden">
           <li onclick="hideSidebar()">
-            <div class="sidebar-logos-container">
+            <div class="sidebar-logos-container flex justify-between items-center">
               <a class="sidebar-bookmark-logo anchor-side" href="#">
                 <img
                   src="./starter-code/images/logo-bookmark.svg"
@@ -41,7 +41,7 @@
           <li><a class="anchor-side" href="#contact">CONTACT</a></li>
           <li><button class="btn">LOGIN</button></li>
           <li>
-            <div class="sidebar-socialmedia-logos-container">
+            <div class="sidebar-socialmedia-logos-container flex">
               <a href="#">
                 <img
                   src="./starter-code/images/icon-facebook.svg"
@@ -97,16 +97,16 @@
         </div>
         <div class="info-hero-box">
           <div class="container">
-            <h2>A Simple Bookmark Manager</h2>
+            <h2 class="text-center">A Simple Bookmark Manager</h2>
 
-            <p class="parraph-text">
+            <p class="text-center px-6 mt-2">
               A clean and simple interface to organize your favourite websites.
               Open a new browser tab and see your sites load instantly. Try it
               for free.
             </p>
 
-            <div class="container-buttons-hero">
-              <button class="btn">Get it on Chrome</button>
+            <div class="flex gap-2 px-6" >
+              <button class="btn text-white bg-blue-500">Get it on Chrome</button>
               <button class="btn">Get it on Firefox</button>
             </div>
           </div>
