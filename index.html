@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./output.css">
     <title>Document</title>
   </head>
-  <body>
+  <body class="font-verdana min-h-screen">
     <header>
-      <div class="container">
-      <nav>
-        <h1>
+      <div class="container" >
+      <nav class=" p-4">
+        <h1 class="hidden lg:flex justify-start">
           <img
             src="./starter-code/images/logo-bookmark.svg"
             alt="Bookmark logo"
@@ -39,7 +39,7 @@
           <li><a class="anchor-side" href="#features">FEATURES</a></li>
           <li><a class="anchor-side" href="#">PRICING</a></li>
           <li><a class="anchor-side" href="#contact">CONTACT</a></li>
-          <li><button class="btn-red">LOGIN</button></li>
+          <li><button class="btn">LOGIN</button></li>
           <li>
             <div class="sidebar-socialmedia-logos-container">
               <a href="#">
@@ -59,8 +59,8 @@
         </ul>
 
         <!-- NAV DESKTOP -->
-        <ul>
-          <li class="hideOnMobile">
+        <ul class=" hidden lg:flex justify-end">
+          <li class="lg:hideOnMobile ">
             <a class="anchor-main" href="#features">FEATURES</a>
           </li>
           <li class="hideOnMobile">
@@ -70,7 +70,7 @@
             <a class="anchor-main" href="#contact">CONTACT</a>
           </li>
           <li class="hideOnMobile">
-            <button class="btn-red">LOGIN</button>
+            <button class="btn bg-red-500 text-white">LOGIN</button>
           </li>
           <li class="menu-button" onclick="showSidebar()">
             <a href="#">
@@ -106,8 +106,8 @@
             </p>
 
             <div class="container-buttons-hero">
-              <button class="btn-primary">Get it on Chrome</button>
-              <button class="btn-grey">Get it on Firefox</button>
+              <button class="btn">Get it on Chrome</button>
+              <button class="btn">Get it on Firefox</button>
             </div>
           </div>
         </div>
@@ -372,6 +372,6 @@
       </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="./main.js" defer></script>
   </body>
 </html>

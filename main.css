@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+
+@layer base {
+    h2{
+        @apply text-3xl font-bold font-medium;
+    }
+
+    h3{
+        @apply text-xl;
+    }
+
+    p{
+          @apply text-gray-400 ;
+    }
+
+    a{
+          @apply text-sm;
+    }
+}
+
+@layer components{
+    .btn{
+        @apply inline-flex itmes-center justify-center font-bold rounded-sm shadow-md border-none px-1 py-2 cursor-pointer;
+    }
+}
