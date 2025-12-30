@@ -2,6 +2,13 @@
 
 
 @layer base {
+    summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;}
     h2{
         @apply text-3xl font-bold font-medium;
     }
@@ -28,7 +35,7 @@
   border-radius: 0.4rem;
   box-shadow: 0 0.4rem 0.8rem rgba(0,0,0,0.2);
   border: none;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   cursor: pointer;
     }
     .sidebar{
@@ -50,34 +57,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5rem;
+  margin: 1rem;
   margin-top: 5rem;
   box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
-  border-radius: 1rem;
+  border-radius: 1rem;}
 
-h2 {
-  margin-bottom: 2rem;
-}
-
-p {
-  margin-bottom: 4rem;
-}
-
-.browser-icon {
-  height: auto;
-  margin: 3rem auto;
-}
-
-.separation-dots {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-  }
-
-button {
-  width: 80%;
-  margin: 2.5rem auto;
-}
 }
