@@ -91,11 +91,18 @@
     <main>
       <!-- HERO -->
       <section class="hero max-w-7xl mx-auto">
-         <div class="relative w-full mx-auto md:order-2 mb-10 md:mb-0 md:flex md:items-center md:justify-center">
-               <span class="absolute bg-blue-600 w-[75%] h-[75%] 
-                bottom-0 right-0 z-0 rounded-bl-[50%]"></span>
-                <img class=" relative z-10 w-[90%] mx-auto " src="./starter-code/images/illustration-hero.svg" alt="illustration hero">
-            </div>
+        <div
+          class="relative w-full mx-auto md:order-2 mb-10 md:mb-0 md:flex md:items-center md:justify-center"
+        >
+          <span
+            class="absolute bg-blue-600 w-[75%] h-[75%] bottom-0 right-0 z-0 rounded-bl-[50%]"
+          ></span>
+          <img
+            class="relative z-10 w-[90%] mx-auto"
+            src="./starter-code/images/illustration-hero.svg"
+            alt="illustration hero"
+          />
+        </div>
         <div
           class="info-hero-box hero max-w-7xl mx-auto px-6 flex items-center justify-center"
         >
@@ -108,7 +115,7 @@
               for free.
             </p>
 
-            <div class="flex gap-2 my-10">
+            <div class="flex justify-center gap-2 my-10">
               <button class="btn text-white bg-blue-500">
                 Get it on Chrome
               </button>
@@ -148,73 +155,93 @@
             </h3>
           </div>
 
+          <!-- FEATURE ONE -->
+           <div class="feature-one">
+          <div
+            class="relative w-full mx-auto mb-10 flex justify-center overflow-visible"
+          >
+            <span
+              class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
+            ></span>
 
-           <!-- FEATURE ONE -->
-<div class="relative w-full mx-auto mb-10 flex justify-center overflow-visible">
-  <span
-    class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
-  ></span>
-
-  <img
-    class="relative z-10 w-[90%] max-w-md mx-auto"
-    src="./starter-code/images/illustration-features-tab-1.svg"
-    alt="illustration feature bookmarking"
-  />
-</div>
-
-  <div class="max-w-7xl mx-auto px-6 py-2 text-center">
-    <h2>Bookmark in one click</h2>
-    <p class="parraph-text">Organize your bookmarks however you like. Our simple drag and drop
-              interface gives you complete control over how you manage your
-              favourite sites.</p>
-    <button class="btn w-fit bg-blue-500 text-white my-4">More Info</button>
-  </div>
-</div>
-          
-
-          <!-- FEATURE TWO -->
-          <div class="feature-two" id="feature-two">
-            <div class="features-image">
-              <img
-                src="./starter-code/images/illustration-features-tab-2.svg"
-                alt="illustration feature speedy searching"
-              />
-            </div>
-            <div class="fmax-w-7xl mx-auto px-6 py-2 text-center">
-              <h2>Intelligent Search</h2>
-
-              <p class="parraph-text">
-                Our powerful feature will help you find saved sites in no time
-                at all. No need to trawl through all of your bookmarks.
-              </p>
-              <button class="btn w-fit bg-blue-500 text-white my-4">
-                More Info
-              </button>
-            </div>
+            <img
+              class="relative z-10 w-[90%] max-w-md mx-auto"
+              src="./starter-code/images/illustration-features-tab-1.svg"
+              alt="illustration feature bookmarking"
+            />
           </div>
 
-          <!-- FEATURE THREE -->
-          <div class="feature-three" id="feature-three">
-            <div class="features-image">
-              <img
-                src="./starter-code/images/illustration-features-tab-3.svg"
-                alt="illustration feature easy sharing"
-              />
-            </div>
-            <div class="max-w-7xl mx-auto px-6 py-2 text-center">
-              <h2>Share your bookmarks</h2>
-
-              <p class="parraph-text">
-                Easily share your bookmarks and collections with others. Create
-                a shareable link that you can send at the click of a button.
-              </p>
-              <button class="btn w-fit bg-blue-500 text-white my-4">
-                More Info
-              </button>
-            </div>
+          <div class="max-w-7xl mx-auto px-6 py-2 text-center">
+            <h2>Bookmark in one click</h2>
+            <p class="parraph-text">
+              Organize your bookmarks however you like. Our simple drag and drop
+              interface gives you complete control over how you manage your
+              favourite sites.
+            </p>
+            <button class="btn w-fit bg-blue-500 text-white my-4">
+              More Info
+            </button>
           </div>
         </div>
-      </section>
+        </div>
+
+        <!-- FEATURE TWO -->
+<div class="feature-two hidden">
+   <div
+            class="relative w-full mx-auto mb-10 flex justify-center overflow-visible"
+          >
+            <span
+              class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
+            ></span>
+
+            <img
+              class="relative z-10 w-[90%] max-w-md mx-auto"
+             src="./starter-code/images/illustration-features-tab-2.svg"
+              alt="illustration feature speedy searching"
+            />
+          </div>
+  
+          <div class="fmax-w-7xl mx-auto px-6 py-2 text-center">
+            <h2>Intelligent Search</h2>
+
+            <p class="parraph-text">
+              Our powerful feature will help you find saved sites in no time at
+              all. No need to trawl through all of your bookmarks.
+            </p>
+            <button class="btn w-fit bg-blue-500 text-white my-4">
+              More Info
+            </button>
+          </div>
+       </div>
+
+        <!-- FEATURE THREE -->
+         <div class="feature-three hidden">
+            <div
+            class="relative w-full mx-auto mb-10 flex justify-center overflow-visible"
+          >
+            <span
+              class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
+            ></span>
+
+            <img
+              class="relative z-10 w-[90%] max-w-md mx-auto"
+              src="./starter-code/images/illustration-features-tab-3.svg"
+              alt="illustration feature easy sharing"
+            />
+          </div>
+  
+          <div class="fmax-w-7xl mx-auto px-6 py-2 text-center">
+            <h2>Share your bookmarks</h2>
+
+            <p class="parraph-text">
+           Easily share your bookmarks and collections with others. Create a
+              shareable link that you can send at the click of a button.
+            </p>
+            <button class="btn w-fit bg-blue-500 text-white my-4">
+              More Info
+            </button>
+          </div>
+</div>
 
       <!-- DOWNLOAD -->
       <section class="py-6">
@@ -227,7 +254,7 @@
           <div class="extensions-container">
             <div class="card">
               <img
-                class=" my-4 pt-10 pb-5"
+                class="my-4 pt-10 pb-5"
                 src="./starter-code/images/logo-chrome.svg"
                 alt="google chrome logo"
               />
@@ -244,8 +271,8 @@
             </div>
 
             <div class="card">
-              <img 
-                class=" my-4 pt-10 pb-5"
+              <img
+                class="my-4 pt-10 pb-5"
                 src="./starter-code/images/logo-firefox.svg"
                 alt="firefox logo"
               />
@@ -263,7 +290,7 @@
 
             <div class="card">
               <img
-                class=" my-4 pt-10 pb-5"
+                class="my-4 pt-10 pb-5"
                 src="./starter-code/images/logo-opera.svg"
                 alt="opera logo"
               />
@@ -372,47 +399,47 @@
           </details>
         </div>
         <div class="flex justify-center">
-          <button class="btn my-4 bg-blue-500 text-white w-fit">More Info</button>
+          <button class="btn my-4 bg-blue-500 text-white w-fit">
+            More Info
+          </button>
         </div>
       </section>
 
       <!-- CONTACT -->
       <section class="max-w-7xl mx-auto px-6 bg-blue-500 pt-20 pb-10">
-          <p class="text-center text-white">35.000+ ALREADY JOINED</p>
-          <h2 class="text-center text-white py-2">
-            Stay up to date with what we re doing
-          </h2>
-          <div class=" flex flex-col gap-4 w-full py-4">
-            <input
-              class="bg-white p-3 rounded-sm"
-              type="text"
-              placeholder="Enter your email address"
-            />
-            <button class="btn bg-red-500 text-white">Contact Us</button>
-          </div>
-
+        <p class="text-center text-white">35.000+ ALREADY JOINED</p>
+        <h2 class="text-center text-white py-2">
+          Stay up to date with what we re doing
+        </h2>
+        <div class="flex flex-col gap-4 w-full py-4">
+          <input
+            class="bg-white p-3 rounded-sm"
+            type="text"
+            placeholder="Enter your email address"
+          />
+          <button class="btn bg-red-500 text-white">Contact Us</button>
+        </div>
       </section>
     </main>
 
-    <footer class="bg-blue-950 flex flex-col items-center gap-6 py-8 text-white">
+    <footer
+      class="bg-blue-950 flex flex-col items-center gap-6 py-8 text-white"
+    >
+      <img
+        src="./starter-code/images/logo-bookmark.svg"
+        class="bookmark-logo-white"
+        alt="Bookmark logo"
+      />
+      <a class="block" href="#features">FEATURES</a>
+      <a class="block" href="#">PRICING</a>
+      <a class="block" href="#contact">CONTACT</a>
+      <div class="flex justify-center gap-4">
         <img
-          src="./starter-code/images/logo-bookmark.svg"
-          class="bookmark-logo-white"
-          alt="Bookmark logo"
+          src="./starter-code/images/icon-facebook.svg"
+          alt="icon facebook"
         />
-        <a class="block" href="#features">FEATURES</a>
-        <a class="block" href="#">PRICING</a>
-        <a class="block" href="#contact">CONTACT</a>
-        <div class="flex justify-center gap-4">
-          <img
-            src="./starter-code/images/icon-facebook.svg"
-            alt="icon facebook"
-          />
-          <img
-            src="./starter-code/images/icon-twitter.svg"
-            alt="icon twitter"
-          />
-        </div>
+        <img src="./starter-code/images/icon-twitter.svg" alt="icon twitter" />
+      </div>
     </footer>
 
     <script src="./main.js" defer></script>
