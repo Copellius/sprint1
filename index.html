@@ -8,89 +8,87 @@
   </head>
   <body class="font-verdana min-h-screen">
     <header>
-      <div class="max-w-7xl mx-auto p-6">
-        <nav>
+      <!-- MAIN NAV -->
+      <div class="w-full mx-auto p-6">
+        <nav class="flex justify-between items-center lg:px-6">
           <h1>
             <img
+              class="object-contain"
               src="./starter-code/images/logo-bookmark.svg"
               alt="Bookmark logo"
             />
           </h1>
 
-          <!-- SIDEBAR MOBILE -->
-          <ul class="sidebar hidden">
-            <li onclick="hideSidebar()">
-              <div
-                class="sidebar-logos-container flex justify-between items-center"
-              >
-                <a class="sidebar-bookmark-logo anchor-side" href="#">
-                  <img
-                    src="./starter-code/images/logo-bookmark.svg"
-                    alt="bookmark logo"
-                  />
-                </a>
-                <a class="sidebar-exit-logo anchor-side" href="#">
-                  <img
-                    src="./starter-code/images/icon-close.svg"
-                    alt="symbol to close sidebar"
-                  />
-                </a>
-              </div>
-            </li>
+          <button type="button" class="block lg:hidden" onclick="showSidebar()">
+            <img
+              src="./starter-code/images/icon-hamburger.svg"
+              alt="website navigation menu"
+            />
+          </button>
 
-            <li><a class="anchor-side" href="#features">FEATURES</a></li>
-            <li><a class="anchor-side" href="#">PRICING</a></li>
-            <li><a class="anchor-side" href="#contact">CONTACT</a></li>
-            <li><button class="btn">LOGIN</button></li>
+          <ul class="hidden lg:flex items-center gap-8">
+            <li><a class="font-medium text-gray-500" href="#features">FEATURES</a></li>
+            <li><a class="font-medium text-gray-500" href="#">PRICING</a></li>
+            <li><a class="font-medium text-gray-500" href="#contact">CONTACT</a></li>
             <li>
-              <div class="sidebar-socialmedia-logos-container flex">
-                <a href="#">
-                  <img
-                    src="./starter-code/images/icon-facebook.svg"
-                    alt="icon facebook"
-                  />
-                </a>
-                <a href="#">
-                  <img
-                    src="./starter-code/images/icon-twitter.svg"
-                    alt="icon twitter"
-                  />
-                </a>
-              </div>
-            </li>
-          </ul>
-
-          <!-- NAV DESKTOP -->
-          <ul class="hidden lg:flex justify-end">
-            <li class="lg:hideOnMobile">
-              <a class="anchor-main" href="#features">FEATURES</a>
-            </li>
-            <li class="hideOnMobile">
-              <a class="anchor-main" href="#">PRICING</a>
-            </li>
-            <li class="hideOnMobile">
-              <a class="anchor-main" href="#contact">CONTACT</a>
-            </li>
-            <li class="hideOnMobile">
-              <button class="btn bg-red-500 text-white">LOGIN</button>
-            </li>
-            <li class="menu-button" onclick="showSidebar()">
-              <a href="#">
-                <img
-                  class="hamburgermenu"
-                  src="./starter-code/images/icon-hamburger.svg"
-                  alt="website navigation menu"
-                />
-              </a>
+              <button
+                class="bg-red-500 text-white flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer"
+              >
+                LOGIN
+              </button>
             </li>
           </ul>
         </nav>
+        <!-- SIDE NAV -->
+        <ul
+          class="sidebar hidden fixed top-0 right-0 h-screen w-full z-999 flex-col items-center bg-[rgba(2,2,56,0.748)] backdrop-blur-lg shadow-[-1rem_0_1rem_rgba(0,0,0,0.1)] p-6 lg:hidden"
+        >
+          <li class="w-full p-4 px-4">
+            <div class="flex justify-between items-center w-full">
+              <a href="#"
+                ><img
+                  src="./starter-code/images/logo-bookmark.svg"
+                  alt="bookmark logo"
+              /></a>
+              <button type="button" onclick="hideSidebar()">
+                <img
+                  src="./starter-code/images/icon-close.svg"
+                  alt="close sidebar"
+                />
+              </button>
+            </div>
+          </li>
+
+          <li
+            class="text-center w-full py-4 mt-6 text-gray-400 border-t border-b border-gray-500"
+          >
+            <a class="text-lg" href="#features">FEATURES</a>
+          </li>
+          <li
+            class="text-center w-full py-4 text-gray-400 border-b border-gray-500"
+          >
+            <a class="text-lg" href="#">PRICING</a>
+          </li>
+          <li
+            class="text-center w-full py-4 text-gray-400 border-b border-gray-500"
+          >
+            <a class="text-lg" href="#contact">CONTACT</a>
+          </li>
+
+          <li class="w-full mt-8">
+            <button
+              class="w-full flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] px-6 py-[0.8rem] cursor-pointer border-2 border-gray-500 text-gray-500"
+            >
+              LOGIN
+            </button>
+          </li>
+        </ul>
       </div>
     </header>
 
     <main>
       <!-- HERO -->
-      <section class="hero max-w-7xl mx-auto">
+      <section class="hero w-full mx-auto lg:flex">
         <div
           class="relative w-full mx-auto md:order-2 mb-10 md:mb-0 md:flex md:items-center md:justify-center"
         >
@@ -104,153 +102,175 @@
           />
         </div>
         <div
-          class="info-hero-box hero max-w-7xl mx-auto px-6 flex items-center justify-center"
+          class="info-hero-box hero w-full mx-auto px-6 flex items-center justify-center"
         >
           <div class="container">
-            <h2 class="text-center">A Simple Bookmark Manager</h2>
+            <h2 class="text-center lg:text-left lg: pl-6">A Simple Bookmark Manager</h2>
 
-            <p class="text-center px-6 mt-2">
+            <p class="text-center px-6 mt-2 lg:text-left">
               A clean and simple interface to organize your favourite websites.
               Open a new browser tab and see your sites load instantly. Try it
               for free.
             </p>
 
-            <div class="flex justify-center gap-2 my-10">
-              <button class="btn text-white bg-blue-600">
+            <div class="flex justify-center gap-2 my-10 lg:justify-start pl-6">
+              <button
+                class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer text-white bg-blue-600"
+              >
                 Get it on Chrome
               </button>
-              <button class="btn bg-gray-100 text-gray-600">Get it on Firefox</button>
+              <button
+                class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer bg-gray-100 text-gray-600"
+              >
+                Get it on Firefox
+              </button>
             </div>
           </div>
         </div>
       </section>
 
       <!-- FEATURES -->
-      <section class="features max-w-7xl mx-auto" id="features">
-        <div class="container">
-          <h2 class="max-w-7xl mx-auto px-6 text-center pt-6 pb-2">Features</h2>
+      <section class="features w-full mx-auto" id="features">
+        <div class="container mx-auto">
+          <h2 class="w-full mx-auto px-6 text-center pt-6 pb-2">Features</h2>
 
-          <p class="max-w-7xl mx-auto px-6 pb-8 text-center">
+          <p class="w-full mx-auto px-6 pb-8 text-center lg:px-50">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
             can access them on the go.
           </p>
 
-          <div class="max-w-7xl mx-auto px-6 py-2 text-center">
-            <h3 class=" py-3 border-b border-t border-gray-200 text-gray-600">
-              <a class="relative font-stretch-semibold text-xl"
+          <div class="w-full mx-auto px-6 py-2 text-center lg:flex lg:justify-center lg:gap-10">
+            <h3 class=" relative py-3 border-b border-t lg:border-t-0 border-gray-200 text-gray-600">
+              <a
+                class=" font-stretch-semibold text-xl"
                 href="#feature-one"
-                onclick="showFeature(1)"
-                >Simple Bookmarking</a
+                onclick="showFeature(1); setActive(this)"
               >
-              <span class="absolute border-b border-red-500 w-50% left-25% bottom-0"></span>
+                Simple Bookmarking
+              </a>
+              <span
+                class="absolute border-b border-red-500 w-1/2 left-1/4 bottom-0 hidden"
+              ></span>
             </h3>
-            
-          <h3 class=" py-3 border-b border-gray-200 text-gray-600">
-              <a class="relative font-stretch-semibold text-xl"
-              href="#feature-two" 
-              onclick="showFeature(2)"
-                >Speedy Searching</a
+
+            <h3 class=" relative py-3 border-b border-gray-200 text-gray-600">
+              <a
+                class=" font-stretch-semibold text-xl"
+                href="#feature-two"
+                onclick="showFeature(2)"
               >
+                Speedy Searching
+              </a>
             </h3>
-              <h3 class=" py-3 border-b border-gray-200 text-gray-600">
-              <a class="relative font-stretch-semibold text-xl"
-              href="#feature-three" 
-              onclick="showFeature(3)">Easy Sharing</a>
+
+            <h3 class=" relative py-3 border-b border-gray-200 text-gray-600">
+              <a
+                class=" font-stretch-semibold text-xl"
+                href="#feature-three"
+                onclick="showFeature(3)"
+              >
+                Easy Sharing
+              </a>
             </h3>
           </div>
 
           <!-- FEATURE ONE -->
-           <div class="feature-one">
-          <div
-            class="relative w-full mx-auto mb-10 flex justify-center overflow-visible"
-          >
-            <span
-              class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
-            ></span>
-
-            <img
-              class="relative z-10 w-[90%] max-w-md mx-auto"
-              src="./starter-code/images/illustration-features-tab-1.svg"
-              alt="illustration feature bookmarking"
-            />
-          </div>
-
-          <div class="max-w-7xl mx-auto px-6 py-2 text-center">
-            <h2>Bookmark in one click</h2>
-            <p class="parraph-text">
-              Organize your bookmarks however you like. Our simple drag and drop
-              interface gives you complete control over how you manage your
-              favourite sites.
-            </p>
-            <button class="btn w-fit bg-blue-600 text-white my-4">
-              More Info
-            </button>
-          </div>
-        </div>
-        </div>
-
-        <!-- FEATURE TWO -->
-<div class="feature-two hidden">
-   <div
-            class="relative w-full mx-auto mb-10 flex justify-center overflow-visible"
-          >
-            <span
-              class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
-            ></span>
-
-            <img
-              class="relative z-10 w-[90%] max-w-md mx-auto"
-             src="./starter-code/images/illustration-features-tab-2.svg"
-              alt="illustration feature speedy searching"
-            />
-          </div>
-  
-          <div class="fmax-w-7xl mx-auto px-6 py-2 text-center">
-            <h2>Intelligent Search</h2>
-
-            <p class="parraph-text">
-              Our powerful feature will help you find saved sites in no time at
-              all. No need to trawl through all of your bookmarks.
-            </p>
-            <button class="btn w-fit bg-blue-600 text-white my-4">
-              More Info
-            </button>
-          </div>
-       </div>
-
-        <!-- FEATURE THREE -->
-         <div class="feature-three hidden">
+          <div class="feature-one mt-20 justify-center lg:flex">
             <div
-            class="relative w-full mx-auto mb-10 flex justify-center overflow-visible"
-          >
-            <span
-              class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
-            ></span>
+              class="relative w-[80%] mx-auto mb-10 flex justify-center overflow-visible"
+            >
+              <span
+                class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
+              ></span>
 
-            <img
-              class="relative z-10 w-[90%] max-w-md mx-auto"
-              src="./starter-code/images/illustration-features-tab-3.svg"
-              alt="illustration feature easy sharing"
-            />
-          </div>
-  
-          <div class="fmax-w-7xl mx-auto px-6 py-2 text-center">
-            <h2>Share your bookmarks</h2>
+              <img
+                class="relative z-10 w-[90%] max-w-md mx-auto"
+                src="./starter-code/images/illustration-features-tab-1.svg"
+                alt="illustration feature bookmarking"
+              />
+            </div>
 
-            <p class="parraph-text">
-           Easily share your bookmarks and collections with others. Create a
-              shareable link that you can send at the click of a button.
-            </p>
-            <button class="btn w-fit bg-blue-600 text-white my-4">
-              More Info
-            </button>
+            <div class=" w-full justify-center mx-auto px-6 py-2 text-center lg:text-left">
+              <h2>Bookmark in one click</h2>
+              <p class="parraph-text">
+                Organize your bookmarks however you like. Our simple drag and
+                drop interface gives you complete control over how you manage
+                your favourite sites.
+              </p>
+              <button
+                class=" mx-auto flex items-center justify-center lg:justify-start font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer w-fit bg-blue-600 text-white my-4"
+              >
+                More Info
+              </button>
+            </div>
           </div>
-</div>
+
+          <!-- FEATURE TWO -->
+          <div class="feature-two mx-auto hidden">
+            <div
+              class="relative w-full mx-auto mb-10 flex justify-center overflow-visible"
+            >
+              <span
+                class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
+              ></span>
+
+              <img
+                class="relative z-10 w-[90%] max-w-md mx-auto"
+                src="./starter-code/images/illustration-features-tab-2.svg"
+                alt="illustration feature speedy searching"
+              />
+            </div>
+
+            <div class="w-full mx-auto px-6 py-2 text-center">
+              <h2>Intelligent Search</h2>
+              <p class="parraph-text">
+                Our powerful feature will help you find saved sites in no time
+                at all. No need to trawl through all of your bookmarks.
+              </p>
+              <button
+                class="flex mx-auto items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer w-fit bg-blue-600 text-white my-4"
+              >
+                More Info
+              </button>
+            </div>
+          </div>
+
+          <!-- FEATURE THREE -->
+          <div class="feature-three hidden">
+            <div
+              class="relative w-full mx-auto mb-10 flex justify-center overflow-visible"
+            >
+              <span
+                class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
+              ></span>
+
+              <img
+                class="relative z-10 w-[90%] max-w-md mx-auto"
+                src="./starter-code/images/illustration-features-tab-3.svg"
+                alt="illustration feature easy sharing"
+              />
+            </div>
+
+            <div class="w-full mx-auto px-6 py-2 text-center">
+              <h2>Share your bookmarks</h2>
+              <p class="parraph-text">
+                Easily share your bookmarks and collections with others. Create
+                a shareable link that you can send at the click of a button.
+              </p>
+              <button
+                class="flex mx-auto items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer w-fit bg-blue-600 text-white my-4"
+              >
+                More Info
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- DOWNLOAD -->
       <section class="py-6">
-        <div class="max-w-7xl mx-auto px-6 py-2 text-center">
+        <div class="w-full mx-auto px-6 py-2 text-center">
           <h2>Download the Extension</h2>
           <p class="pt-2">
             We ve got more browsers in the pipeline. Please do let us know if
@@ -270,7 +290,9 @@
                 src="./starter-code/images/bg-dots.svg"
                 alt="separation dots for more readable information"
               />
-              <button class="btn bg-blue-600 text-white my-8">
+              <button
+                class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer bg-blue-600 text-white my-8"
+              >
                 Add & Install Extension
               </button>
             </div>
@@ -288,7 +310,9 @@
                 src="./starter-code/images/bg-dots.svg"
                 alt="separation dots for more readable information"
               />
-              <button class="btn bg-blue-600 text-white my-8">
+              <button
+                class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer bg-blue-600 text-white my-8"
+              >
                 Add & Install Extension
               </button>
             </div>
@@ -306,7 +330,9 @@
                 src="./starter-code/images/bg-dots.svg"
                 alt="separation dots for more readable information"
               />
-              <button class="btn bg-blue-600 text-white my-8">
+              <button
+                class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer bg-blue-600 text-white my-8"
+              >
                 Add & Install Extension
               </button>
             </div>
@@ -315,7 +341,7 @@
       </section>
 
       <!-- FAQ -->
-      <section class="max-w-7xl mx-auto px-6 py-2">
+      <section class="w-full mx-auto px-6 py-2">
         <div>
           <h2 class="pt-6 pb-2 text-center">Frequently Asked Questions</h2>
           <p class="pb-2 text-center">
@@ -404,14 +430,16 @@
           </details>
         </div>
         <div class="flex justify-center">
-          <button class="btn my-4 bg-blue-600 text-white w-fit">
+          <button
+            class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer my-4 bg-blue-600 text-white w-fit"
+          >
             More Info
           </button>
         </div>
       </section>
 
       <!-- CONTACT -->
-      <section class="max-w-7xl mx-auto px-6 bg-blue-600 pt-20 pb-10">
+      <section class="w-full mx-auto px-6 bg-blue-600 pt-20 pb-10">
         <p class="text-center text-white">35.000+ ALREADY JOINED</p>
         <h2 class="text-center text-white py-2">
           Stay up to date with what we re doing
@@ -422,7 +450,11 @@
             type="text"
             placeholder="Enter your email address"
           />
-          <button class="btn bg-red-500 text-white">Contact Us</button>
+          <button
+            class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer bg-red-500 text-white"
+          >
+            Contact Us
+          </button>
         </div>
       </section>
     </main>
