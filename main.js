@@ -27,11 +27,12 @@ function showFeature(which) {
   if (which === 3) document.querySelector(".feature-three").classList.remove("hidden");
 }
 
-function setActive(tab) {
+function setActiveTab(activeTab) {
+  const tabs = document.querySelectorAll('[role="tab"]');
 
-  document.querySelectorAll("h3 span.bg-red-500").forEach(line => {
-    line.classList.add("hidden");
+  tabs.forEach(tab => {
+    tab.setAttribute("aria-selected", "false");
   });
 
-  tab.querySelector("span.bg-red-500").classList.remove("hidden");
+  activeTab.setAttribute("aria-selected", "true");
 }

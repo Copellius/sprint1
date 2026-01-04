@@ -7,477 +7,621 @@
     <title>Document</title>
   </head>
   <body class="font-verdana min-h-screen">
-    <header>
-      <!-- MAIN NAV -->
-      <div class="w-full mx-auto p-6">
-        <nav class="flex justify-between items-center lg:px-6">
-          <h1>
+  <header>
+  <!-- MAIN NAV -->
+  <div class="mx-auto p-6">
+    <nav
+      class="px-4 flex justify-between items-center lg:px-12"
+      aria-label="Main navigation"
+    >
+      <h1>
+        <a href="#" aria-label="Homepage">
+          <img
+            class="object-contain"
+            src="./starter-code/images/logo-bookmark.svg"
+            alt="Bookmark logo"
+          />
+        </a>
+      </h1>
+
+      <button
+        type="button"
+        class="block cursor-pointer lg:hidden"
+        onclick="showSidebar()"
+        aria-label="Open navigation menu"
+      >
+        <img
+          src="./starter-code/images/icon-hamburger.svg"
+          alt=""
+        />
+      </button>
+
+      <ul class="hidden lg:flex items-center gap-8">
+        <li>
+          <a class="font-medium text-gray-500" href="#features">FEATURES</a>
+        </li>
+        <li>
+          <a class="font-medium text-gray-500" href="#">PRICING</a>
+        </li>
+        <li>
+          <a class="font-medium text-gray-500" href="#contact">CONTACT</a>
+        </li>
+        <li>
+          <button
+            class="bg-red-500 text-white flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer"
+            aria-label="Login"
+          >
+            LOGIN
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- SIDE NAV -->
+    <ul
+      class="sidebar hidden fixed top-0 right-0 h-screen w-full z-999 flex-col items-center bg-[rgba(2,2,56,0.748)] backdrop-blur-lg shadow-[-1rem_0_1rem_rgba(0,0,0,0.1)] p-6 lg:hidden"
+      aria-label="Mobile navigation"
+    >
+      <li class="w-full p-4 px-4">
+        <div class="flex justify-between items-center w-full">
+          <a href="#" aria-label="Homepage">
             <img
-              class="object-contain"
               src="./starter-code/images/logo-bookmark.svg"
               alt="Bookmark logo"
             />
-          </h1>
-
-          <button type="button" class="block lg:hidden" onclick="showSidebar()">
+          </a>
+          <button
+            type="button"
+            onclick="hideSidebar()"
+            aria-label="Close navigation menu"
+          >
             <img
-              src="./starter-code/images/icon-hamburger.svg"
-              alt="website navigation menu"
+              src="./starter-code/images/icon-close.svg"
+              alt=""
             />
           </button>
+        </div>
+      </li>
 
-          <ul class="hidden lg:flex items-center gap-8">
-            <li><a class="font-medium text-gray-500" href="#features">FEATURES</a></li>
-            <li><a class="font-medium text-gray-500" href="#">PRICING</a></li>
-            <li><a class="font-medium text-gray-500" href="#contact">CONTACT</a></li>
-            <li>
-              <button
-                class="bg-red-500 text-white flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer"
-              >
-                LOGIN
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <!-- SIDE NAV -->
-        <ul
-          class="sidebar hidden fixed top-0 right-0 h-screen w-full z-999 flex-col items-center bg-[rgba(2,2,56,0.748)] backdrop-blur-lg shadow-[-1rem_0_1rem_rgba(0,0,0,0.1)] p-6 lg:hidden"
+      <li class="text-center w-full py-4 mt-6 text-gray-400 border-t border-b border-gray-500">
+        <a class="text-lg" href="#features">FEATURES</a>
+      </li>
+      <li class="text-center w-full py-4 text-gray-400 border-b border-gray-500">
+        <a class="text-lg" href="#">PRICING</a>
+      </li>
+      <li class="text-center w-full py-4 text-gray-400 border-b border-gray-500">
+        <a class="text-lg" href="#contact">CONTACT</a>
+      </li>
+
+      <li class="w-full mt-8">
+        <button
+          class="w-full flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] px-6 py-[0.8rem] cursor-pointer border-2 border-gray-500 text-gray-500"
+          aria-label="Login"
         >
-          <li class="w-full p-4 px-4">
-            <div class="flex justify-between items-center w-full">
-              <a href="#"
-                ><img
-                  src="./starter-code/images/logo-bookmark.svg"
-                  alt="bookmark logo"
-              /></a>
-              <button type="button" onclick="hideSidebar()">
-                <img
-                  src="./starter-code/images/icon-close.svg"
-                  alt="close sidebar"
-                />
-              </button>
-            </div>
-          </li>
-
-          <li
-            class="text-center w-full py-4 mt-6 text-gray-400 border-t border-b border-gray-500"
-          >
-            <a class="text-lg" href="#features">FEATURES</a>
-          </li>
-          <li
-            class="text-center w-full py-4 text-gray-400 border-b border-gray-500"
-          >
-            <a class="text-lg" href="#">PRICING</a>
-          </li>
-          <li
-            class="text-center w-full py-4 text-gray-400 border-b border-gray-500"
-          >
-            <a class="text-lg" href="#contact">CONTACT</a>
-          </li>
-
-          <li class="w-full mt-8">
-            <button
-              class="w-full flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] px-6 py-[0.8rem] cursor-pointer border-2 border-gray-500 text-gray-500"
-            >
-              LOGIN
-            </button>
-          </li>
-        </ul>
-      </div>
-    </header>
+          LOGIN
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
 
     <main>
       <!-- HERO -->
-      <section class="hero w-full mx-auto lg:flex">
-        <div
-          class="relative w-full mx-auto md:order-2 mb-10 md:mb-0 md:flex md:items-center md:justify-center"
+<section class="py-8 hero w-full lg:flex" aria-labelledby="hero-title">
+  <div class="relative w-full md:order-2 mb-10 md:mb-0 md:flex md:items-center md:justify-center">
+    <span  aria-hidden="true"
+    class="absolute bg-blue-600 w-[75%] h-[75%] bottom-0 right-0 z-0 rounded-bl-[50%]"></span>
+    <img
+      class="relative z-10 w-full lg:mr-16"
+      src="./starter-code/images/illustration-hero.svg"
+      alt="illustration hero"
+    />
+  </div>
+ <!-- Hero box -->
+  <div class="w-full lg:ml-14 px-6 flex items-center justify-center">
+    <div>
+      <h2 class="text-center lg:text-left lg:pl-6">A Simple Bookmark Manager</h2>
+
+      <p class="text-center px-6 mt-2 lg:text-left">
+        A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
+      </p>
+
+      <div class="flex justify-center gap-2 my-10 lg:justify-start lg:pl-6">
+        <button class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] text-white bg-blue-600">
+          Get it on Chrome
+        </button>
+        <button class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] bg-gray-100 text-gray-600">
+          Get it on Firefox
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- FEATURES -->
+<section
+  id="features"
+  class="features w-full px-4 py-8 lg:px-20"
+  aria-labelledby="features-title"
+>
+  <div class="container mx-auto">
+    <h2
+      id="features-title"
+      class="mx-auto px-6 pt-6 pb-2 text-center lg:px-10"
+    >
+      Features
+    </h2>
+
+    <p class="mx-auto px-6 pb-8 text-center lg:px-50">
+      Our aim is to make it quick and easy for you to access your favourite
+      websites. Your bookmarks sync between your devices so you can access them
+      on the go.
+    </p>
+
+    <!-- TABS -->
+    <div
+      class="mx-auto px-6 py-2 text-center lg:mx-24 lg:flex lg:justify-center"
+      role="tablist"
+      aria-label="Feature tabs"
+    >
+      <h3
+        class="group relative flex w-full cursor-pointer justify-center border-b border-gray-300 p-6 text-center"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-feature-one"
+        tabindex="0"
+        onclick="setActiveTab(this)"
+      >
+        <a
+          class="relative z-10 text-xl text-gray-600"
+          href="#feature-one"
+          onclick="showFeature(1); setActive(this)"
         >
+          Simple Bookmarking
+        </a>
+
+        <span
+          aria-hidden="true"
+          class="absolute bottom-0 left-1/4 h-[0.4rem] w-1/2 bg-red-500 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-aria-selected:opacity-100"
+        ></span>
+      </h3>
+
+      <h3
+        class="group relative flex w-full cursor-pointer justify-center border-b border-gray-300 p-6 text-center"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-feature-two"
+        tabindex="0"
+        onclick="setActiveTab(this)"
+      >
+        <a
+          class="relative z-10 text-xl text-gray-600"
+          href="#feature-two"
+          onclick="showFeature(2)"
+        >
+          Speedy Searching
+        </a>
+
+        <span
+          aria-hidden="true"
+          class="absolute bottom-0 left-1/4 h-[0.4rem] w-1/2 bg-red-500 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-aria-selected:opacity-100"
+        ></span>
+      </h3>
+
+      <h3
+        class="group relative flex w-full cursor-pointer justify-center border-b border-gray-300 p-6 text-center"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-feature-three"
+        tabindex="0"
+        onclick="setActiveTab(this)"
+      >
+        <a
+          class="relative z-10 text-xl text-gray-600"
+          href="#feature-three"
+          onclick="showFeature(3)"
+        >
+          Easy Sharing
+        </a>
+
+        <span
+          aria-hidden="true"
+          class="absolute bottom-0 left-1/4 h-[0.4rem] w-1/2 bg-red-500 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-aria-selected:opacity-100"
+        ></span>
+      </h3>
+    </div>
+
+    <!-- FEATURE ONE -->
+    <div
+      id="panel-feature-one"
+      class="feature-one my-20 justify-center"
+      role="tabpanel"
+      aria-labelledby="tab-feature-one"
+    >
+      <div class="lg:flex lg:justify-center">
+        <div class="relative mx-auto mb-10 flex w-[80%] justify-center overflow-visible">
           <span
-            class="absolute bg-blue-600 w-[75%] h-[75%] bottom-0 right-0 z-0 rounded-bl-[50%]"
+            aria-hidden="true"
+            class="absolute -bottom-6 -left-30 z-0 h-[80%] w-[80%] rounded-br-[50%] bg-blue-600"
           ></span>
+
           <img
-            class="relative z-10 w-[90%] mx-auto"
-            src="./starter-code/images/illustration-hero.svg"
-            alt="illustration hero"
+            class="relative z-10 mx-auto w-[80%] max-w-md"
+            src="./starter-code/images/illustration-features-tab-1.svg"
+            alt="illustration feature bookmarking"
           />
         </div>
-        <div
-          class="info-hero-box hero w-full mx-auto px-6 flex items-center justify-center"
-        >
-          <div class="container">
-            <h2 class="text-center lg:text-left lg: pl-6">A Simple Bookmark Manager</h2>
 
-            <p class="text-center px-6 mt-2 lg:text-left">
-              A clean and simple interface to organize your favourite websites.
-              Open a new browser tab and see your sites load instantly. Try it
-              for free.
-            </p>
-
-            <div class="flex justify-center gap-2 my-10 lg:justify-start pl-6">
-              <button
-                class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer text-white bg-blue-600"
-              >
-                Get it on Chrome
-              </button>
-              <button
-                class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer bg-gray-100 text-gray-600"
-              >
-                Get it on Firefox
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FEATURES -->
-      <section class="features w-full mx-auto" id="features">
-        <div class="container mx-auto">
-          <h2 class="w-full mx-auto px-6 text-center pt-6 pb-2">Features</h2>
-
-          <p class="w-full mx-auto px-6 pb-8 text-center lg:px-50">
-            Our aim is to make it quick and easy for you to access your
-            favourite websites. Your bookmarks sync between your devices so you
-            can access them on the go.
+        <div class="mx-auto w-full justify-center px-6 py-2 text-center lg:text-left">
+          <h2>Bookmark in one click</h2>
+          <p class="parraph-text">
+            Organize your bookmarks however you like. Our simple drag and drop
+            interface gives you complete control over how you manage your
+            favourite sites.
           </p>
-
-          <div class="w-full mx-auto px-6 py-2 text-center lg:flex lg:justify-center lg:gap-10">
-            <h3 class=" relative py-3 border-b border-t lg:border-t-0 border-gray-200 text-gray-600">
-              <a
-                class=" font-stretch-semibold text-xl"
-                href="#feature-one"
-                onclick="showFeature(1); setActive(this)"
-              >
-                Simple Bookmarking
-              </a>
-              <span
-                class="absolute border-b border-red-500 w-1/2 left-1/4 bottom-0 hidden"
-              ></span>
-            </h3>
-
-            <h3 class=" relative py-3 border-b border-gray-200 text-gray-600">
-              <a
-                class=" font-stretch-semibold text-xl"
-                href="#feature-two"
-                onclick="showFeature(2)"
-              >
-                Speedy Searching
-              </a>
-            </h3>
-
-            <h3 class=" relative py-3 border-b border-gray-200 text-gray-600">
-              <a
-                class=" font-stretch-semibold text-xl"
-                href="#feature-three"
-                onclick="showFeature(3)"
-              >
-                Easy Sharing
-              </a>
-            </h3>
-          </div>
-
-          <!-- FEATURE ONE -->
-          <div class="feature-one mt-20 justify-center lg:flex">
-            <div
-              class="relative w-[80%] mx-auto mb-10 flex justify-center overflow-visible"
-            >
-              <span
-                class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
-              ></span>
-
-              <img
-                class="relative z-10 w-[90%] max-w-md mx-auto"
-                src="./starter-code/images/illustration-features-tab-1.svg"
-                alt="illustration feature bookmarking"
-              />
-            </div>
-
-            <div class=" w-full justify-center mx-auto px-6 py-2 text-center lg:text-left">
-              <h2>Bookmark in one click</h2>
-              <p class="parraph-text">
-                Organize your bookmarks however you like. Our simple drag and
-                drop interface gives you complete control over how you manage
-                your favourite sites.
-              </p>
-              <button
-                class=" mx-auto flex items-center justify-center lg:justify-start font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer w-fit bg-blue-600 text-white my-4"
-              >
-                More Info
-              </button>
-            </div>
-          </div>
-
-          <!-- FEATURE TWO -->
-          <div class="feature-two mx-auto hidden">
-            <div
-              class="relative w-full mx-auto mb-10 flex justify-center overflow-visible"
-            >
-              <span
-                class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
-              ></span>
-
-              <img
-                class="relative z-10 w-[90%] max-w-md mx-auto"
-                src="./starter-code/images/illustration-features-tab-2.svg"
-                alt="illustration feature speedy searching"
-              />
-            </div>
-
-            <div class="w-full mx-auto px-6 py-2 text-center">
-              <h2>Intelligent Search</h2>
-              <p class="parraph-text">
-                Our powerful feature will help you find saved sites in no time
-                at all. No need to trawl through all of your bookmarks.
-              </p>
-              <button
-                class="flex mx-auto items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer w-fit bg-blue-600 text-white my-4"
-              >
-                More Info
-              </button>
-            </div>
-          </div>
-
-          <!-- FEATURE THREE -->
-          <div class="feature-three hidden">
-            <div
-              class="relative w-full mx-auto mb-10 flex justify-center overflow-visible"
-            >
-              <span
-                class="absolute bg-blue-600 w-[90%] h-[90%] -bottom-6 -left-10 z-0 rounded-br-[50%]"
-              ></span>
-
-              <img
-                class="relative z-10 w-[90%] max-w-md mx-auto"
-                src="./starter-code/images/illustration-features-tab-3.svg"
-                alt="illustration feature easy sharing"
-              />
-            </div>
-
-            <div class="w-full mx-auto px-6 py-2 text-center">
-              <h2>Share your bookmarks</h2>
-              <p class="parraph-text">
-                Easily share your bookmarks and collections with others. Create
-                a shareable link that you can send at the click of a button.
-              </p>
-              <button
-                class="flex mx-auto items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer w-fit bg-blue-600 text-white my-4"
-              >
-                More Info
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- DOWNLOAD -->
-      <section class="py-6">
-        <div class="w-full mx-auto px-6 py-2 text-center">
-          <h2>Download the Extension</h2>
-          <p class="pt-2">
-            We ve got more browsers in the pipeline. Please do let us know if
-            you ve got a favourite you d like us to prioritize.
-          </p>
-          <div class="extensions-container">
-            <div class="card">
-              <img
-                class="my-4 pt-10 pb-5"
-                src="./starter-code/images/logo-chrome.svg"
-                alt="google chrome logo"
-              />
-              <h3>Add to Chrome</h3>
-              <p class="pb-4">Minimum version 62</p>
-              <img
-                class="w-full"
-                src="./starter-code/images/bg-dots.svg"
-                alt="separation dots for more readable information"
-              />
-              <button
-                class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer bg-blue-600 text-white my-8"
-              >
-                Add & Install Extension
-              </button>
-            </div>
-
-            <div class="card">
-              <img
-                class="my-4 pt-10 pb-5"
-                src="./starter-code/images/logo-firefox.svg"
-                alt="firefox logo"
-              />
-              <h3>Add to Firefox</h3>
-              <p class="pb-4">Minimum version 55</p>
-              <img
-                class="w-full"
-                src="./starter-code/images/bg-dots.svg"
-                alt="separation dots for more readable information"
-              />
-              <button
-                class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer bg-blue-600 text-white my-8"
-              >
-                Add & Install Extension
-              </button>
-            </div>
-
-            <div class="card">
-              <img
-                class="my-4 pt-10 pb-5"
-                src="./starter-code/images/logo-opera.svg"
-                alt="opera logo"
-              />
-              <h3>Add to Opera</h3>
-              <p class="pb-4">Minimum version 46</p>
-              <img
-                class="w-full"
-                src="./starter-code/images/bg-dots.svg"
-                alt="separation dots for more readable information"
-              />
-              <button
-                class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer bg-blue-600 text-white my-8"
-              >
-                Add & Install Extension
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="w-full mx-auto px-6 py-2">
-        <div>
-          <h2 class="pt-6 pb-2 text-center">Frequently Asked Questions</h2>
-          <p class="pb-2 text-center">
-            Here are some of our FAQs. If you have any other questions you d
-            like answered please feel free to email us.
-          </p>
-        </div>
-        <div>
-          <details class="group border-b border-gray-200 lg:border-t">
-            <summary
-              class="flex items-center justify-between py-5 cursor-pointer"
-            >
-              What is Bookmark?
-
-              <img
-                src="./starter-code/images/icon-arrow.svg"
-                alt="image of a dropdown arrow"
-                class="w-5 h-4 shrink-0 object-contain transition-transform duration-300 group-open:rotate-180"
-              />
-            </summary>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-              esse ipsa similique dolor incidunt animi in itaque maxime
-              perferendis, quos officiis quisquam nam cupiditate distinctio ex?
-              Asperiores maiores iste totam!
-            </p>
-          </details>
-          <details class="group border-b border-gray-200">
-            <summary
-              class="flex items-center justify-between py-5 cursor-pointer"
-            >
-              How can I request a new Browser?
-
-              <img
-                src="./starter-code/images/icon-arrow.svg"
-                alt="image of a dropdown arrow"
-                class="w-5 h-4 shrink-0 object-contain transition-transform duration-300 group-open:rotate-180"
-              />
-            </summary>
-            <p class="faq-info">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-              esse ipsa similique dolor incidunt animi in itaque maxime
-              perferendis, quos officiis quisquam nam cupiditate distinctio ex?
-              Asperiores maiores iste totam!
-            </p>
-          </details>
-
-          <details class="group border-b border-gray-200">
-            <summary
-              class="flex items-center justify-between py-5 cursor-pointer"
-            >
-              Is there a mobile app?
-
-              <img
-                src="./starter-code/images/icon-arrow.svg"
-                alt="image of a dropdown arrow"
-                class="w-5 h-4 shrink-0 object-contain transition-transform duration-300 group-open:rotate-180"
-              />
-            </summary>
-            <p class="faq-info">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-              esse ipsa similique dolor incidunt animi in itaque maxime
-              perferendis, quos officiis quisquam nam cupiditate distinctio ex?
-              Asperiores maiores iste totam!
-            </p>
-          </details>
-
-          <details class="group border-b border-gray-200">
-            <summary
-              class="flex items-center justify-between py-5 cursor-pointer"
-            >
-              What about other Chromium browsers?
-
-              <img
-                src="./starter-code/images/icon-arrow.svg"
-                alt="image of a dropdown arrow"
-                class="w-5 h-4 shrink-0 object-contain transition-transform duration-300 group-open:rotate-180"
-              />
-            </summary>
-            <p class="faq-info">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-              esse ipsa similique dolor incidunt animi in itaque maxime
-              perferendis, quos officiis quisquam nam cupiditate distinctio ex?
-              Asperiores maiores iste totam!
-            </p>
-          </details>
-        </div>
-        <div class="flex justify-center">
           <button
-            class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer my-4 bg-blue-600 text-white w-fit"
+            class="mx-auto my-4 flex w-fit items-center justify-center rounded-[0.4rem] bg-blue-600 px-6 py-[0.8rem] font-bold text-white shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] lg:mx-0"
           >
             More Info
           </button>
         </div>
-      </section>
+      </div>
+    </div>
 
-      <!-- CONTACT -->
-      <section class="w-full mx-auto px-6 bg-blue-600 pt-20 pb-10">
-        <p class="text-center text-white">35.000+ ALREADY JOINED</p>
-        <h2 class="text-center text-white py-2">
-          Stay up to date with what we re doing
-        </h2>
-        <div class="flex flex-col gap-4 w-full py-4">
-          <input
-            class="bg-white p-3 rounded-sm"
-            type="text"
-            placeholder="Enter your email address"
+    <!-- FEATURE TWO -->
+    <div
+      id="panel-feature-two"
+      class="feature-two my-20 mx-auto hidden"
+      role="tabpanel"
+      aria-labelledby="tab-feature-two"
+    >
+      <div class="lg:flex lg:justify-center">
+        <div class="relative mx-auto mb-10 flex w-[80%] justify-center overflow-visible">
+          <span
+            aria-hidden="true"
+            class="absolute -bottom-6 -left-30 z-0 h-[80%] w-[80%] rounded-br-[50%] bg-blue-600"
+          ></span>
+
+          <img
+            class="relative z-10 mx-auto w-[70%] max-w-md"
+            src="./starter-code/images/illustration-features-tab-2.svg"
+            alt="illustration feature speedy searching"
           />
+        </div>
+
+        <div class="mx-auto w-full px-6 py-2 text-center lg:text-left">
+          <h2>Intelligent Search</h2>
+          <p class="parraph-text">
+            Our powerful feature will help you find saved sites in no time at
+            all. No need to trawl through all of your bookmarks.
+          </p>
           <button
-            class="flex items-center justify-center font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] cursor-pointer bg-red-500 text-white"
+            class="mx-auto my-4 flex w-fit items-center justify-center rounded-[0.4rem] bg-blue-600 px-6 py-[0.8rem] font-bold text-white shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] lg:mx-0"
           >
-            Contact Us
+            More Info
           </button>
         </div>
-      </section>
+      </div>
+    </div>
+
+    <!-- FEATURE THREE -->
+    <div
+      id="panel-feature-three"
+      class="feature-three my-20 hidden"
+      role="tabpanel"
+      aria-labelledby="tab-feature-three"
+    >
+      <div class="lg:flex lg:justify-center">
+        <div class="relative mx-auto mb-10 flex w-full justify-center overflow-visible">
+          <span
+            aria-hidden="true"
+            class="absolute -bottom-6 -left-30 z-0 h-[80%] w-[80%] rounded-br-[50%] bg-blue-600"
+          ></span>
+
+          <img
+            class="relative z-10 mx-auto w-[70%] max-w-md"
+            src="./starter-code/images/illustration-features-tab-3.svg"
+            alt="illustration feature easy sharing"
+          />
+        </div>
+
+        <div class="mx-auto w-full px-6 py-2 text-center lg:text-left">
+          <h2>Share your bookmarks</h2>
+          <p class="parraph-text">
+            Easily share your bookmarks and collections with others. Create a
+            shareable link that you can send at the click of a button.
+          </p>
+          <button
+            class="mx-auto my-4 flex w-fit items-center justify-center rounded-[0.4rem] bg-blue-600 px-6 py-[0.8rem] font-bold text-white shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] lg:mx-0"
+          >
+            More Info
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- DOWNLOAD -->
+<section class="px-4 py-12" aria-labelledby="download-heading">
+  <div class="mx-auto w-full max-w-7xl px-6 py-2 text-center">
+    <h2 id="download-heading">Download the Extension</h2>
+
+    <p class="pt-2">
+      We ve got more browsers in the pipeline. Please do let us know if you ve
+      got a favourite you d like us to prioritize.
+    </p>
+
+    <div
+      class="lg:flex lg:justify-center lg:[&>*:nth-child(1)]:translate-y-6 lg:[&>*:nth-child(2)]:translate-y-10 lg:[&>*:nth-child(3)]:translate-y-14"
+      role="list"
+      aria-label="Browser extensions"
+    >
+      <div
+        class="m-4 mt-8 flex flex-col items-center rounded-2xl shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)]"
+        role="listitem"
+        aria-label="Chrome extension"
+      >
+        <img
+          class="my-4 pt-10 pb-5"
+          src="./starter-code/images/logo-chrome.svg"
+          alt="Chrome logo"
+        />
+
+        <h3>Add to Chrome</h3>
+        <p class="pb-4">Minimum version 62</p>
+
+        <img
+          class="w-full"
+          src="./starter-code/images/bg-dots.svg"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <button
+          type="button"
+          class="my-8 flex items-center justify-center rounded-[0.4rem] bg-blue-600 px-6 py-[0.8rem] font-bold text-white shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)]"
+          aria-label="Add and install the Chrome extension"
+        >
+          Add & Install Extension
+        </button>
+      </div>
+
+      <div
+        class="m-4 mt-8 flex flex-col items-center rounded-2xl shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)]"
+        role="listitem"
+        aria-label="Firefox extension"
+      >
+        <img
+          class="my-4 pt-10 pb-5"
+          src="./starter-code/images/logo-firefox.svg"
+          alt="Firefox logo"
+        />
+
+        <h3>Add to Firefox</h3>
+        <p class="pb-4">Minimum version 55</p>
+
+        <img
+          class="w-full"
+          src="./starter-code/images/bg-dots.svg"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <button
+          type="button"
+          class="my-8 flex items-center justify-center rounded-[0.4rem] bg-blue-600 px-6 py-[0.8rem] font-bold text-white shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)]"
+          aria-label="Add and install the Firefox extension"
+        >
+          Add & Install Extension
+        </button>
+      </div>
+
+      <div
+        class="m-4 mt-8 flex flex-col items-center rounded-2xl shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)]"
+        role="listitem"
+        aria-label="Opera extension"
+      >
+        <img
+          class="my-4 pt-10 pb-5"
+          src="./starter-code/images/logo-opera.svg"
+          alt="Opera logo"
+        />
+
+        <h3>Add to Opera</h3>
+        <p class="pb-4">Minimum version 46</p>
+
+        <img
+          class="w-full"
+          src="./starter-code/images/bg-dots.svg"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <button
+          type="button"
+          class="my-8 flex items-center justify-center rounded-[0.4rem] bg-blue-600 px-6 py-[0.8rem] font-bold text-white shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)]"
+          aria-label="Add and install the Opera extension"
+        >
+          Add & Install Extension
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- FAQ -->
+<section class="mx-auto px-8 py-12 lg:mx-50" aria-labelledby="faq-heading">
+  <div>
+    <h2 id="faq-heading" class="pt-6 pb-2 text-center">
+      Frequently Asked Questions
+    </h2>
+    <p class="pb-2 text-center">
+      Here are some of our FAQs. If you have any other questions you d like
+      answered please feel free to email us.
+    </p>
+  </div>
+
+  <div role="list" aria-label="Frequently asked questions">
+    <details class="group border-b border-gray-200 lg:border-t" role="listitem">
+      <summary class="flex items-center justify-between py-5 cursor-pointer">
+        <span>What is Bookmark?</span>
+        <img
+          src="./starter-code/images/icon-arrow.svg"
+          alt=""
+          aria-hidden="true"
+          class="h-4 w-5 shrink-0 object-contain transition-transform duration-300 group-open:rotate-180"
+        />
+      </summary>
+      <p class="pb-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus esse
+        ipsa similique dolor incidunt animi in itaque maxime perferendis, quos
+        officiis quisquam nam cupiditate distinctio ex? Asperiores maiores iste
+        totam!
+      </p>
+    </details>
+
+    <details class="group border-b border-gray-200" role="listitem">
+      <summary class="flex items-center justify-between py-5 cursor-pointer">
+        <span>How can I request a new Browser?</span>
+        <img
+          src="./starter-code/images/icon-arrow.svg"
+          alt=""
+          aria-hidden="true"
+          class="h-4 w-5 shrink-0 object-contain transition-transform duration-300 group-open:rotate-180"
+        />
+      </summary>
+      <p class="pb-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus esse
+        ipsa similique dolor incidunt animi in itaque maxime perferendis, quos
+        officiis quisquam nam cupiditate distinctio ex? Asperiores maiores iste
+        totam!
+      </p>
+    </details>
+
+    <details class="group border-b border-gray-200" role="listitem">
+      <summary class="flex items-center justify-between py-5 cursor-pointer">
+        <span>Is there a mobile app?</span>
+        <img
+          src="./starter-code/images/icon-arrow.svg"
+          alt=""
+          aria-hidden="true"
+          class="h-4 w-5 shrink-0 object-contain transition-transform duration-300 group-open:rotate-180"
+        />
+      </summary>
+      <p class="pb-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus esse
+        ipsa similique dolor incidunt animi in itaque maxime perferendis, quos
+        officiis quisquam nam cupiditate distinctio ex? Asperiores maiores iste
+        totam!
+      </p>
+    </details>
+
+    <details class="group border-b border-gray-200" role="listitem">
+      <summary class="flex items-center justify-between py-5 cursor-pointer">
+        <span>What about other Chromium browsers?</span>
+        <img
+          src="./starter-code/images/icon-arrow.svg"
+          alt=""
+          aria-hidden="true"
+          class="h-4 w-5 shrink-0 object-contain transition-transform duration-300 group-open:rotate-180"
+        />
+      </summary>
+      <p class="pb-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus esse
+        ipsa similique dolor incidunt animi in itaque maxime perferendis, quos
+        officiis quisquam nam cupiditate distinctio ex? Asperiores maiores iste
+        totam!
+      </p>
+    </details>
+  </div>
+
+  <div class="flex justify-center py-8">
+    <button
+      type="button"
+      class="my-4 flex w-fit items-center justify-center rounded-[0.4rem] bg-blue-600 px-6 py-[0.8rem] font-bold text-white shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)]"
+      aria-label="More information about frequently asked questions"
+    >
+      More Info
+    </button>
+  </div>
+</section>
+
+      <!-- CONTACT -->
+  <section
+  class="w-full mt-12 mx-auto px-6 bg-blue-600 py-20 lg:px-80"
+  aria-labelledby="newsletter-title"
+>
+  <p class="text-center text-white">35.000+ ALREADY JOINED</p>
+
+  <h2
+    id="newsletter-title"
+    class="text-center text-white py-2"
+  >
+    Stay up to date with what we’re doing
+  </h2>
+
+  <form
+    class="flex flex-col gap-4 w-full py-4 lg:flex-row lg:justify-center"
+  >
+    <label for="email" class="sr-only">
+      Email address
+    </label>
+
+    <input
+      id="email"
+      name="email"
+      type="email"
+      required
+      class="bg-white p-3 rounded-sm lg:flex-1"
+      placeholder="Enter your email address"
+    />
+
+    <button
+      type="submit"
+      class="flex items-center justify-center lg:shrink-0 font-bold rounded-[0.4rem] shadow-[0_0.4rem_0.8rem_rgba(0,0,0,0.2)] border-0 px-6 py-[0.8rem] bg-red-500 text-white"
+      aria-label="Submit email address"
+    >
+      Contact Us
+    </button>
+  </form>
+</section>
     </main>
 
-    <footer
-      class="bg-blue-950 flex flex-col items-center gap-6 py-8 text-white"
-    >
+<footer
+  class="bg-blue-950 flex flex-col lg:flex-row items-center gap-8 py-10 lg:py-6 lg:px-20 text-white"
+>
+  <a href="#" aria-label="Homepage">
+    <img
+      src="./starter-code/images/logo-bookmark.svg"
+      class="cursor-pointer"
+      alt="Bookmark logo"
+    />
+  </a>
+
+  <nav aria-label="Footer navigation" class="flex flex-col lg:flex-row items-center gap-8">
+    <a class="block text-gray-500" href="#features">FEATURES</a>
+    <a class="block text-gray-500" href="#">PRICING</a>
+    <a class="block text-gray-500" href="#contact">CONTACT</a>
+  </nav>
+
+  <div class="flex justify-center lg:ml-auto gap-8" aria-label="Social links">
+    <a href="#" aria-label="Facebook">
       <img
-        src="./starter-code/images/logo-bookmark.svg"
-        class="bookmark-logo-white"
-        alt="Bookmark logo"
+        class="cursor-pointer"
+        src="./starter-code/images/icon-facebook.svg"
+        alt=""
       />
-      <a class="block" href="#features">FEATURES</a>
-      <a class="block" href="#">PRICING</a>
-      <a class="block" href="#contact">CONTACT</a>
-      <div class="flex justify-center gap-4">
-        <img
-          src="./starter-code/images/icon-facebook.svg"
-          alt="icon facebook"
-        />
-        <img src="./starter-code/images/icon-twitter.svg" alt="icon twitter" />
-      </div>
-    </footer>
+    </a>
+    <a href="#" aria-label="Twitter">
+      <img
+        class="cursor-pointer"
+        src="./starter-code/images/icon-twitter.svg"
+        alt=""
+      />
+    </a>
+  </div>
+</footer>
 
     <script src="./main.js" defer></script>
   </body>
